@@ -52,7 +52,7 @@ const NavItems = styled.ul`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 2em;
+  gap: 2.5em;
   color: white;
   @media screen and (max-width: 768px) {
     display: none;
@@ -62,7 +62,33 @@ const NavItems = styled.ul`
 const NavLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.colorWhite};
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 0;
+      height: 5px;
+      border-radius: 12px;
+      background: linear-gradient(
+        to right,
+        ${({ theme }) => theme.secondaryColor},
+        ${({ theme }) => theme.tertiaryColor}
+      );
+      transform: translateX(-50%);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `;
 
 const Navbar = () => {

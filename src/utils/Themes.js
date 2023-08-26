@@ -1,6 +1,7 @@
 export const darkTheme = {
   bg: "#031527",
   secondaryColor: "#1B9A82",
+  tertiaryColor: "#481C75",
   buttonColor: "#4A1D75",
   textWhite: "#fff",
 };

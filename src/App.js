@@ -14,9 +14,27 @@ const Body = styled.div`
   overflow-x: hidden;
 `;
 
+const Circle = styled.div`
+  position: absolute;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    top: -14em;
+    left: -25em;
+    background-color: ${({ theme }) => theme.secondaryColor};
+    filter: blur(25em);
+    z-index: 100;
+  }
+`;
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
+      <Circle>hey</Circle>
       <Navbar />
       <Body>
         <HeroSection />
