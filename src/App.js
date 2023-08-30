@@ -26,17 +26,16 @@ const Circle = styled.div`
     top: -14em;
     left: -25em;
     background-color: ${({ theme }) => theme.secondaryColor};
-    filter: blur(25em);
-    z-index: 100;
+    filter: blur(5em);
   }
 `;
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Circle>hey</Circle>
-      <Navbar />
+      <Circle />
       <Body>
+        <Navbar />
         <HeroSection />
         <Skills />
         <Projects />

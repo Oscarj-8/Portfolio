@@ -1,8 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.bg};
   height: 5em;
   display: flex;
   justify-content: center;
@@ -24,6 +25,7 @@ const NavContainer = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 80em;
+  padding: 2em;
 `;
 
 const NavLogo = styled(LinkR)`
@@ -39,10 +41,7 @@ const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
-    position: Absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 50%);
+
     font-size: 1.5em;
     color: ${({ theme }) => theme.colorWhite};
   }
@@ -91,14 +90,44 @@ const NavLink = styled.a`
   }
 `;
 
+const MobileNav = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  top: 0;
+  right: 0;
+  background-color: #d4b1f4;
+  padding: 1em;
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+`;
+
+const MobileNavLink = styled(LinkR)`
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  color: ${({ theme }) => theme.textWhite};
+  &:hover {
+    color: blue;
+  }
+`;
+
 const Navbar = () => {
+  const [open, isOpen] = useState(false);
   return (
     <Nav>
       <NavContainer>
         <NavLogo>
           <h2>AM</h2>
         </NavLogo>
-        <MobileIcon></MobileIcon>
+        <MobileIcon>
+          <FaBars onClick={() => isOpen(!open)} color="#fff" />
+        </MobileIcon>
 
         <NavItems>
           <NavLink>About</NavLink>
@@ -107,6 +136,14 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </NavItems>
       </NavContainer>
+      {open && (
+        <MobileNav open={open}>
+          <MobileNavLink>About</MobileNavLink>
+          <MobileNavLink>Skills</MobileNavLink>
+          <MobileNavLink>Projects</MobileNavLink>
+          <MobileNavLink>Contact</MobileNavLink>
+        </MobileNav>
+      )}
     </Nav>
   );
 };
