@@ -14,26 +14,47 @@ const Body = styled.div`
   overflow-x: hidden;
 `;
 
-const Circle = styled.div`
+const CircleOne = styled.div`
   position: absolute;
 
   &::before {
     content: "";
     position: absolute;
-    width: 50em;
-    height: 50em;
+    width: 30em;
+    height: 30em;
+    opacity: 50%;
     border-radius: 50%;
-    top: -16em;
-    left: -30em;
+    top: -10em;
+    left: -20em;
     background-color: ${({ theme }) => theme.secondaryColor};
     filter: blur(10em);
+    z-index: 0;
+  }
+`;
+
+const CircleTwo = styled.div`
+  position: absolute;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    opacity: 50%;
+    border-radius: 50%;
+    top: 20em;
+    right: -45em;
+    background-color: ${({ theme }) => theme.tertiaryColor};
+    filter: blur(10em);
+    z-index: 0;
   }
 `;
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Circle />
+      <CircleOne />
+      <CircleTwo />
       <Body>
         <Navbar />
         <HeroSection />

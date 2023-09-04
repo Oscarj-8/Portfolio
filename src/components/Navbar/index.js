@@ -4,14 +4,13 @@ import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
-  height: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1em;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   @media screen and (max-width: 960px) {
     transition: all 0.8s ease;
   }
@@ -21,11 +20,10 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.7em;
   z-index: 1;
   width: 100%;
   max-width: 80em;
-  padding: 2em;
+  padding: 0em 1em;
 `;
 
 const NavLogo = styled(LinkR)`
@@ -146,10 +144,10 @@ const Navbar = () => {
           <CloseButton onClick={CloseMobileNav}>&times;</CloseButton>
 
           <MobileNavLinks>
-            <MobileNavLink>About</MobileNavLink>
-            <MobileNavLink>Skills</MobileNavLink>
-            <MobileNavLink>Projects</MobileNavLink>
-            <MobileNavLink>Contact</MobileNavLink>
+            <MobileNavLink onClick={CloseMobileNav}>About</MobileNavLink>
+            <MobileNavLink onClick={CloseMobileNav}>Skills</MobileNavLink>
+            <MobileNavLink onClick={CloseMobileNav}>Projects</MobileNavLink>
+            <MobileNavLink onClick={CloseMobileNav}>Contact</MobileNavLink>
           </MobileNavLinks>
         </MobileNav>
       )}

@@ -19,7 +19,7 @@ import ps from "../images/ps.png";
 import figma from "../images/figma.png";
 import xd from "../images/xd.png";
 import taskTrackerReact from "../images/taskTrackerReact.png";
-import taskTraackerAngular from "../images/taskTraackerAngular.png";
+import taskTraackerAngular from "../images/taskTrackerAngular.png";
 import lewach from "../images/lewach.png";
 import hr from "../images/hr.png";
 
