@@ -24,7 +24,7 @@ import lewach from "../images/lewach.png";
 import hr from "../images/hr.png";
 
 export const Bio = {
-  name: "Abdulahi",
+  name: "Abdulahi Muhammed",
   roles: [
     "Full stack developer",
     "UI/UX Designer",

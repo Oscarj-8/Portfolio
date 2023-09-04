@@ -22,8 +22,17 @@ const NavContainer = styled.div`
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 80em;
+  max-width: 90em;
   padding: 0em 1em;
+  @media screen and (min-width: 500px) {
+    padding: 0 2em;
+  }
+  @media screen and (min-width: 994px) {
+    padding: 0 5em;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 7em;
+  }
 `;
 
 const NavLogo = styled(LinkR)`
