@@ -20,13 +20,13 @@ const Circle = styled.div`
   &::before {
     content: "";
     position: absolute;
-    width: 30em;
-    height: 30em;
+    width: 50em;
+    height: 50em;
     border-radius: 50%;
-    top: -14em;
-    left: -25em;
+    top: -16em;
+    left: -30em;
     background-color: ${({ theme }) => theme.secondaryColor};
-    filter: blur(5em);
+    filter: blur(10em);
   }
 `;
 

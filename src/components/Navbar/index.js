@@ -41,7 +41,6 @@ const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
-
     font-size: 1.5em;
     color: ${({ theme }) => theme.colorWhite};
   }
@@ -64,46 +63,43 @@ const NavLink = styled.a`
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
   position: relative;
 
   &:hover {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      width: 0;
-      height: 5px;
-      border-radius: 12px;
-      background: linear-gradient(
-        to right,
-        ${({ theme }) => theme.secondaryColor},
-        ${({ theme }) => theme.tertiaryColor}
-      );
-      transform: translateX(-50%);
-      transition: all 0.5s ease-in-out;
-    }
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
+    background-image: linear-gradient(
+      to right,
+      ${({ theme }) => theme.secondaryColor},
+      ${({ theme }) => theme.tertiaryColor}
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 `;
 
 const MobileNav = styled.div`
   position: absolute;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 2em;
   top: 0;
   right: 0;
   background-color: #d4b1f4;
-  padding: 1em;
   width: 50%;
+  height: 100vh;
   transition: all 0.5s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  z-index: 1;
+`;
+
+const MobileNavLinks = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.3em;
+  margin-top: 3em;
 `;
 
 const MobileNavLink = styled(LinkR)`
@@ -112,13 +108,22 @@ const MobileNavLink = styled(LinkR)`
   font-weight: 700;
   transition: all 0.5s ease-in-out;
   color: ${({ theme }) => theme.textWhite};
-  &:hover {
-    color: blue;
-  }
+`;
+
+const CloseButton = styled.button`
+  align-self: start;
+  background: none;
+  border: none;
+  font-size: 3em;
+  color: #fff;
+  padding-left: 0.5em;
 `;
 
 const Navbar = () => {
-  const [open, isOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const CloseMobileNav = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <Nav>
       <NavContainer>
@@ -126,7 +131,7 @@ const Navbar = () => {
           <h2>AM</h2>
         </NavLogo>
         <MobileIcon>
-          <FaBars onClick={() => isOpen(!open)} color="#fff" />
+          <FaBars onClick={CloseMobileNav} color="#fff" />
         </MobileIcon>
 
         <NavItems>
@@ -136,12 +141,16 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </NavItems>
       </NavContainer>
-      {open && (
-        <MobileNav open={open}>
-          <MobileNavLink>About</MobileNavLink>
-          <MobileNavLink>Skills</MobileNavLink>
-          <MobileNavLink>Projects</MobileNavLink>
-          <MobileNavLink>Contact</MobileNavLink>
+      {isOpen && (
+        <MobileNav open={isOpen}>
+          <CloseButton onClick={CloseMobileNav}>&times;</CloseButton>
+
+          <MobileNavLinks>
+            <MobileNavLink>About</MobileNavLink>
+            <MobileNavLink>Skills</MobileNavLink>
+            <MobileNavLink>Projects</MobileNavLink>
+            <MobileNavLink>Contact</MobileNavLink>
+          </MobileNavLinks>
         </MobileNav>
       )}
     </Nav>
