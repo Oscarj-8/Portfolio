@@ -4,6 +4,7 @@ export const darkTheme = {
   tertiaryColor: "#481C75",
   buttonColor: "#4A1D75",
   textWhite: "#fff",
+  descriptionColor: "#7E908E",
 };
 
 export const breakpoint = {

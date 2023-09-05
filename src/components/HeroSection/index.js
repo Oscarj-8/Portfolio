@@ -11,7 +11,6 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin-top: 3em;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
   }
@@ -93,11 +92,11 @@ const Span = styled.span`
 `;
 
 const Description = styled.div`
-  color: ${({ theme }) => theme.textWhite};
+  color: ${({ theme }) => theme.descriptionColor};
   line-height: 1.6em;
   letter-spacing: 1.5px;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1em;
   @media screen and (min-width: 768px) {
     text-align: left;
