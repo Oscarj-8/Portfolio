@@ -6,23 +6,12 @@ import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import ContactMe from "./components/ContactMe";
 import Projects from "./components/Projects";
-import background from "./images/background.png";
 
 const Body = styled.div`
   background: ${({ theme }) => theme.bg};
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-`;
-
-const FirstContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-image: url(${background});
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 // const CircleOne = styled.div`
@@ -67,10 +56,9 @@ function App() {
       {/* <CircleOne />
       <CircleTwo /> */}
       <Body>
-        <FirstContainer>
-          <Navbar />
-          <HeroSection />
-        </FirstContainer>
+        <Navbar />
+        <HeroSection />
+
         <Skills />
         <Projects />
         <ContactMe />
