@@ -22,7 +22,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 90em;
+  max-width: 76em;
   padding: 0em 1em;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
@@ -90,12 +90,13 @@ const MobileNav = styled.div`
   flex-direction: column;
   top: 0;
   right: 0;
-  background-color: #d4b1f4;
+  background-color: ${({ theme }) => theme.bg};
   width: 50%;
   height: 100vh;
   transition: all 0.5s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   z-index: 1;
+  box-shadow: -10px 1px 20px rgba(0, 0, 0, 0.5);
 `;
 
 const MobileNavLinks = styled.div`
