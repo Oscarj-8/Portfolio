@@ -39,7 +39,7 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/abdulahi-muhammed-352851285/",
 };
 
-export const Skills = [
+export const skills = [
   {
     title: "Frontend",
     skills: [
