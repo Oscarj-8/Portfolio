@@ -118,14 +118,20 @@ const HeroButtons = styled.div`
 `;
 
 const ResumeButton = styled.button`
+  position: relative;
   font-size: 1em;
   font-weight: 500;
   padding: 0.7em;
   letter-spacing: 1px;
   background-color: ${({ theme }) => theme.buttonColor};
-  border: none;
+  border: 1px solid transparent;
   color: ${({ theme }) => theme.textWhite};
   border-radius: 0.25em;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid ${({ theme }) => theme.buttonColor};
+    color: ${({ theme }) => theme.buttonColor};
+  }
 `;
 
 const GithubButton = styled.button`
@@ -137,6 +143,11 @@ const GithubButton = styled.button`
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   color: ${({ theme }) => theme.secondaryColor};
   border-radius: 0.25em;
+  &:hover {
+    background-color: ${({ theme }) => theme.secondaryColor};
+    border: 1px solid transparent;
+    color: #fff;
+  }
 `;
 
 const HeroSection = () => {
