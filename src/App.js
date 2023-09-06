@@ -13,7 +13,6 @@ const Body = styled.div`
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 3em;
 `;
 
 // const CircleOne = styled.div`

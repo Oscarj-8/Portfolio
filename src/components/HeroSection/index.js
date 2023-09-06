@@ -11,6 +11,7 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2em;
+  height: calc(100vh - 4em);
   @media screen and (min-width: 500px) {
     padding: 0 2em;
   }
@@ -19,12 +20,10 @@ const HeroContainer = styled.div`
     flex-direction: row;
   }
   @media screen and (min-width: 994px) {
-    margin-top: 6em;
     padding: 0 5em;
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 6em;
-    padding: 0 7em;
+    padding: 0 6em;
   }
 `;
 

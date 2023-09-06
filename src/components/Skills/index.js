@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { skills } from "../../data/constants";
 
 const SkillsSection = styled.div`
-  background-color: pink;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.textWhite};
@@ -18,11 +17,12 @@ const SkillsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 1em;
 `;
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.725em;
   font-weight: 700;
 `;
 
@@ -37,31 +37,53 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: blue;
-  gap: 1em;
+  gap: 2em;
+  @media screen and (min-width: 1200px) {
+    width: 70%;
+  }
 `;
 
 const Skill = styled.div`
   width: 100%;
-  background-color: green;
   display: flex;
   flex-direction: column;
   max-width: 31.5em;
+  gap: 2em;
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   border-radius: 0.5em;
-  height: 100%;
+  min-height: 20em;
+  flex-grow: 1;
+  padding: 1em;
+  box-shadow: 2px 2px 10px rgba(27, 154, 130, 0.5);
 `;
 
-const SkillTitle = styled.h3``;
+const SkillTitle = styled.h3`
+  margin: 0;
+  color: ${({ theme }) => theme.descriptionColor};
+  font-size: 1.375em;
+`;
 
 const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 `;
 
 const SkillItem = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid ${({ theme }) => theme.secondaryColor};
+  border-radius: 1.5em;
+  font-size: 1.125em;
+  color: ${({ theme }) => theme.descriptionColor};
+  font-size: 1.125em;
 `;
 
 const SkillImage = styled.img`
