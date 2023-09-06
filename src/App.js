@@ -10,7 +10,6 @@ import Projects from "./components/Projects";
 const Body = styled.div`
   background: ${({ theme }) => theme.bg};
   width: 100%;
-  height: 100vh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;

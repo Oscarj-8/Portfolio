@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { skills } from "../../data/constants";
 
 const SkillsSection = styled.div`
+  background-color: pink;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.textWhite};
@@ -34,10 +35,10 @@ const Description = styled.h1`
 const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
   align-items: center;
   justify-content: center;
   background-color: blue;
+  gap: 1em;
 `;
 
 const Skill = styled.div`
@@ -46,6 +47,9 @@ const Skill = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 31.5em;
+  border: 1px solid ${({ theme }) => theme.secondaryColor};
+  border-radius: 0.5em;
+  height: 100%;
 `;
 
 const SkillTitle = styled.h3``;
@@ -75,12 +79,12 @@ const Skills = () => {
         </Description>
         <SkillsContainer>
           {skills.map((item) => (
-            <Skill>
+            <Skill key={item.title}>
               <SkillTitle>{item.title}</SkillTitle>
               <SkillList>
                 {item.skills.map((skill) => (
-                  <SkillItem>
-                    <SkillImage src={skill.image} />
+                  <SkillItem key={skill.name}>
+                    <SkillImage src={skill.image} alt={skill.name} />
                     {skill.name}
                   </SkillItem>
                 ))}

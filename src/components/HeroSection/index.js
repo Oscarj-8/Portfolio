@@ -103,6 +103,7 @@ const Description = styled.div`
   }
   @media screen and (min-width: 1200px) {
     width: 90%;
+    font-size: 1.125em;
   }
 `;
 
@@ -131,6 +132,10 @@ const ResumeButton = styled.button`
     border: 1px solid ${({ theme }) => theme.buttonColor};
     color: ${({ theme }) => theme.buttonColor};
   }
+  @media screen and (min-width: 1200px) {
+    padding: 1em 1.5em;
+    font-weight: 600;
+  }
 `;
 
 const GithubButton = styled.button`
@@ -146,6 +151,10 @@ const GithubButton = styled.button`
     background-color: ${({ theme }) => theme.secondaryColor};
     border: 1px solid transparent;
     color: #fff;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 1em 1.5em;
+    font-weight: 600;
   }
 `;
 

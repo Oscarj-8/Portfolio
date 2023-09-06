@@ -45,39 +45,39 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image: { react },
+        image: react,
       },
       {
         name: "Angular",
-        image: { angular },
+        image: angular,
       },
       {
         name: "Javascript",
-        image: { js },
+        image: js,
       },
       {
         name: "HTML5",
-        image: { html },
+        image: html,
       },
       {
         name: "Bootstrap",
-        image: { bootstrap },
+        image: bootstrap,
       },
       {
         name: "Material UI",
-        image: { materialui },
+        image: materialui,
       },
       {
         name: "CSS3",
-        image: { css },
+        image: css,
       },
       {
         name: "TypeScript",
-        image: { typescript },
+        image: typescript,
       },
       {
         name: "Tailwind CSS",
-        image: { tailwind },
+        image: tailwind,
       },
     ],
   },
@@ -86,19 +86,19 @@ export const skills = [
     skills: [
       {
         name: "Node.Js",
-        image: { node },
+        image: node,
       },
       {
         name: "Express Js",
-        image: { express },
+        image: express,
       },
       {
         name: "MongoDB",
-        image: { mongoDB },
+        image: mongoDB,
       },
       {
         name: "MySQL",
-        image: { mySql },
+        image: mySql,
       },
     ],
   },
@@ -107,31 +107,31 @@ export const skills = [
     skills: [
       {
         name: "Vs Code",
-        image: { vsCode },
+        image: vsCode,
       },
       {
         name: "Android Studio",
-        image: { andriodStudio },
+        image: andriodStudio,
       },
       {
         name: "GitHub",
-        image: { github },
+        image: github,
       },
       {
         name: "Git",
-        image: { git },
+        image: git,
       },
       {
         name: "Adobe Photoshop",
-        image: { ps },
+        image: ps,
       },
       {
         name: "Figma",
-        image: { figma },
+        image: figma,
       },
       {
         name: "Adobe XD",
-        image: { xd },
+        image: xd,
       },
     ],
   },
