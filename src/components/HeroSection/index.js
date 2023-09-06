@@ -11,6 +11,7 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2em;
+  margin-bottom: 2em;
   height: calc(100vh - 4em);
   @media screen and (min-width: 500px) {
     padding: 0 2em;
@@ -23,7 +24,7 @@ const HeroContainer = styled.div`
     padding: 0 5em;
   }
   @media screen and (min-width: 1200px) {
-    padding: 0 6em;
+    padding: 0em 6em;
   }
 `;
 
@@ -42,7 +43,7 @@ const HeroText = styled.div`
 `;
 
 const ImageSec = styled.img`
-  width: 85%;
+  width: 65%;
   border-radius: 50%;
   border: 3px solid ${({ theme }) => theme.tertiaryColor};
   @media screen and (min-width: 500px) {
@@ -123,16 +124,18 @@ const ResumeButton = styled.button`
   padding: 0.7em;
   letter-spacing: 1px;
   background-color: ${({ theme }) => theme.buttonColor};
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: ${({ theme }) => theme.textWhite};
   border-radius: 0.25em;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background-color: transparent;
-    border: 1px solid ${({ theme }) => theme.buttonColor};
+    border: 2px solid ${({ theme }) => theme.buttonColor};
     color: ${({ theme }) => theme.buttonColor};
   }
   @media screen and (min-width: 1200px) {
     padding: 1em 1.5em;
+    font-size: 1.1em;
     font-weight: 600;
   }
 `;
@@ -143,16 +146,18 @@ const GithubButton = styled.button`
   padding: 0.7em;
   letter-spacing: 1px;
   background: none;
-  border: 1px solid ${({ theme }) => theme.secondaryColor};
+  border: 2px solid ${({ theme }) => theme.secondaryColor};
   color: ${({ theme }) => theme.secondaryColor};
   border-radius: 0.25em;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background-color: ${({ theme }) => theme.secondaryColor};
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     color: #fff;
   }
   @media screen and (min-width: 1200px) {
     padding: 1em 1.5em;
+    font-size: 1.1em;
     font-weight: 600;
   }
 `;
@@ -162,7 +167,7 @@ const HeroSection = () => {
     <HeroContainer>
       <HeroText>
         <Title>
-          Hi i'm <br /> {Bio.name}
+          Hi, i'm <br /> {Bio.name}
         </Title>
         <TextLoop>
           I am a

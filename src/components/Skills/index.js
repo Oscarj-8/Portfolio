@@ -24,6 +24,9 @@ const Title = styled.h1`
   margin: 0;
   font-size: 1.725em;
   font-weight: 700;
+  @media screen and (min-width: 994px) {
+    font-size: ${({ theme }) => theme.sectionTitle};
+  }
 `;
 
 const Description = styled.h1`
@@ -51,10 +54,15 @@ const Skill = styled.div`
   gap: 2em;
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   border-radius: 0.5em;
-  min-height: 20em;
+  min-height: 18em;
   flex-grow: 1;
   padding: 1em;
   box-shadow: 2px 2px 10px rgba(27, 154, 130, 0.5);
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 20px rgba(27, 154, 130, 0.5);
+  }
 `;
 
 const SkillTitle = styled.h3`
@@ -69,7 +77,8 @@ const SkillList = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 1.25em;
+  align-self: center;
 `;
 
 const SkillItem = styled.div`
@@ -84,6 +93,12 @@ const SkillItem = styled.div`
   font-size: 1.125em;
   color: ${({ theme }) => theme.descriptionColor};
   font-size: 1.125em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 10px rgba(27, 154, 130, 0.5);
+  }
 `;
 
 const SkillImage = styled.img`

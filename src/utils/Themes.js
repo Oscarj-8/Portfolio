@@ -5,6 +5,7 @@ export const darkTheme = {
   buttonColor: "#4A1D75",
   textWhite: "#fff",
   descriptionColor: "#7E908E",
+  sectionTitle: "2em",
 };
 
 export const breakpoint = {
