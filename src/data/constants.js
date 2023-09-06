@@ -137,10 +137,10 @@ export const skills = [
   },
 ];
 
-export const Projects = [
+export const projects = [
   {
     id: 0,
-    image: { taskTrackerReact },
+    image: taskTrackerReact,
     title: "Task Tracker (ReactJS)",
     description:
       "This task tracker web app built with ReactJS and JSON server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
@@ -149,7 +149,7 @@ export const Projects = [
   },
   {
     id: 1,
-    image: { taskTraackerAngular },
+    image: taskTraackerAngular,
     title: "Task Tracker (Angular)",
     description:
       "This task tracker web app built with Angular and Json-server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
@@ -158,7 +158,7 @@ export const Projects = [
   },
   {
     id: 2,
-    image: { lewach },
+    image: lewach,
     title: "Lewach Items Exchange ",
     description:
       "This platform offers users a dynamic and intuitive interface to effortlessly trade items. powered by Node.js, the backend ensures swift and secure communication, allowing users to list, browse, and connect with others for mutually beneficial exchanges.",
@@ -167,7 +167,7 @@ export const Projects = [
   },
   {
     id: 3,
-    image: { hr },
+    image: hr,
     title: "Hr sample",
     description:
       " Angular-based HR web app featuring an in-memory database, designed for efficient CRUD operations on candidate and employee data. This project demonstrates streamlined data management, highlighting its potential to optimize HR processes.",

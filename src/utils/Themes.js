@@ -6,6 +6,8 @@ export const darkTheme = {
   textWhite: "#fff",
   descriptionColor: "#7E908E",
   sectionTitle: "2em",
+  projectCardColor: "#02101F",
+  projectTagColor: "#CEA6F4",
 };
 
 export const breakpoint = {
