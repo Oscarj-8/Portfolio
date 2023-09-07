@@ -4,14 +4,12 @@ import { styled } from "styled-components";
 const ProjectsSection = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: yellow;
   padding: 0em 1em;
   align-items: center;
   justify-content: center;
 `;
 
 const Wrapper = styled.div`
-  background-color: green;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -31,7 +29,6 @@ const Title = styled.h1`
 `;
 
 const Description = styled.h1`
-  width: 50%;
   font-size: 1.125em;
   color: ${({ theme }) => theme.descriptionColor};
   font-weight: 500;
@@ -42,7 +39,6 @@ const ProjectsContainer = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: blue;
   gap: 1em;
   justify-content: center;
   @media screen and (min-width: 768px) {
@@ -75,11 +71,12 @@ const Tags = styled.div`
 
 const Tag = styled.span`
   background-color: ${({ theme }) => theme.buttonColor};
-  color: ${({ theme }) => theme.descriptionColor};
+  color: ${({ theme }) => theme.projectTagColor};
   font-size: 0.75em;
   padding: 0.5em 1em;
   border-radius: 1em;
   font-weight: 500;
+  letter-spacing: 1px;
 `;
 
 const ProjectTitle = styled.h3`

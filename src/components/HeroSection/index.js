@@ -11,7 +11,6 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin-bottom: 2em;
   height: calc(100vh - 4em);
   @media screen and (min-width: 500px) {
     padding: 0 2em;

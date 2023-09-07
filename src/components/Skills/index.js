@@ -40,7 +40,7 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 3em;
   @media screen and (min-width: 1200px) {
     width: 70%;
   }
