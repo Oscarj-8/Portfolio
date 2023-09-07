@@ -40,6 +40,7 @@ const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+  align-items: flex-start;
   justify-content: center;
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
