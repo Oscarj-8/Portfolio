@@ -13,6 +13,8 @@ const Body = styled.div`
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 // const CircleOne = styled.div`

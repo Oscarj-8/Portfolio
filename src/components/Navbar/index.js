@@ -4,11 +4,11 @@ import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1em;
-  position: sticky;
   top: 0;
   z-index: 2;
   @media screen and (max-width: 960px) {
