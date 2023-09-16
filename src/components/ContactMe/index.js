@@ -56,7 +56,22 @@ const Header = styled.h3``;
 const Description = styled.p``;
 
 const GetInTouch = styled.h3``;
+
+const validationSchema = Yup.object().shape({
+  fullName: Yup.string().required("Name is required"),
+  email: Yup.string().required("Email is required"),
+  subject: Yup.string().required("Subject is required"),
+  message: Yup.string().required("Message is required"),
+});
+
 const ContactMe = () => {
+  const initialValues = {
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
   return (
     <ContactMeSection>
       <ContactMeLeft>
@@ -79,6 +94,35 @@ const ContactMe = () => {
           Please don't hesitate to get in touch with me for any inquiries or
           potential collaborations
         </Description>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={(values, { resetForm }) => {
+            console.log(values);
+            resetForm();
+          }}
+        >
+          <Form>
+            <GetInTouch>Get in touch</GetInTouch>
+            <div>
+              <Field type="text" id="fullName" name="fullName" />
+              <ErrorMessage name="fullName" component="div" />
+            </div>
+            <div>
+              <Field type="text" id="email" name="email" />
+              <ErrorMessage name="email" component="div" />
+            </div>
+            <div>
+              <Field type="text" id="subject" name="subject" />
+              <ErrorMessage name="subject" component="div" />
+            </div>
+            <div>
+              <Field as="textarea" id="message" name="message" />
+              <ErrorMessage name="message" component="div" />
+            </div>
+            <button type="submit">Send message</button>
+          </Form>
+        </Formik>
       </ContactMeRight>
     </ContactMeSection>
   );
