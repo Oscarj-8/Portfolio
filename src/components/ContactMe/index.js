@@ -45,6 +45,7 @@ const EmailSection = styled.div`
   padding: 1em;
   border-radius: 0.5em;
   gap: 1em;
+  align-items: start;
 `;
 
 const TopSection = styled.p`
@@ -52,10 +53,15 @@ const TopSection = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
+  gap: 0.5em;
+  font-weight: 900;
 `;
 
 const Email = styled.p`
   margin: 0;
+  color: ${({ theme }) => theme.projectTagColor};
+  font-weight: 500;
 `;
 
 const ContactMeRight = styled.div`
@@ -71,6 +77,7 @@ const RightTopSection = styled.div`
   flex-direction: column;
   gap: 1em;
 `;
+
 const Header = styled.h2`
   margin: 0;
 `;
@@ -113,7 +120,7 @@ const ContactMe = () => {
         <Message>🤟🏼 Let's create something together</Message>
         <EmailSection>
           <TopSection>
-            <FaRegEnvelope /> Mail me at
+            <FaRegEnvelope style={{ fontWeight: "bold" }} /> Mail me at
           </TopSection>
           <Email>mabdulahi954@gmail.com</Email>
         </EmailSection>
