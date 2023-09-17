@@ -61,7 +61,6 @@ function App() {
       <Body>
         <Navbar />
         <HeroSection />
-
         <Skills />
         <Projects />
         <ContactMe />

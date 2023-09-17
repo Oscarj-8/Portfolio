@@ -2,20 +2,29 @@ import { styled } from "styled-components";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+
 const ContactMeSection = styled.div`
-width: 100%;
-display: grid;
-place-items:: center;
-grid-template-columns: 1fr;
-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 const ContactMeLeft = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 1em;
 `;
 
 const Title = styled.h2`
@@ -29,13 +38,16 @@ const Message = styled.p`
 `;
 
 const EmailSection = styled.div`
+  background-color: #0f2338;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.descriptionColor};
+  padding: 1em;
+  border-radius: 0.5em;
+  gap: 1em;
 `;
 
 const TopSection = styled.p`
-  background-color: #0f2338;
   margin: 0;
   display: flex;
   align-items: center;
@@ -49,13 +61,31 @@ const Email = styled.p`
 const ContactMeRight = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
 `;
 
-const Header = styled.h3``;
+const RightTopSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+`;
+const Header = styled.h2`
+  margin: 0;
+`;
 
-const Description = styled.p``;
+const Description = styled.p`
+  margin: 0;
+  font-size: 1.125em;
+  color: #7E908E;
+  font-weight: 500;
+}
+`;
 
-const GetInTouch = styled.h3``;
+const GetInTouch = styled.h3`
+  margin: 0;
+`;
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required("Name is required"),
@@ -80,7 +110,7 @@ const ContactMe = () => {
           <br />
           Tell me about yout Project
         </Title>
-        <Message>Let's create something together</Message>
+        <Message>🤟🏼 Let's create something together</Message>
         <EmailSection>
           <TopSection>
             <FaRegEnvelope /> Mail me at
@@ -89,11 +119,14 @@ const ContactMe = () => {
         </EmailSection>
       </ContactMeLeft>
       <ContactMeRight>
-        <Header>Contact me</Header>
-        <Description>
-          Please don't hesitate to get in touch with me for any inquiries or
-          potential collaborations
-        </Description>
+        <RightTopSection>
+          <Header>Contact me</Header>
+          <Description>
+            Please don't hesitate to get in touch with me for any inquiries or
+            potential collaborations
+          </Description>
+        </RightTopSection>
+
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
