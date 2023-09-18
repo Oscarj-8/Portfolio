@@ -3,9 +3,32 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const customTextArea = styled.textarea`
+const inputStyles = `
+ font-family: "Montserrat", sans-serif;
   width: 100%;
+  padding: 0.8em;
+  margin-bottom: 8px;
+  border: 2px solid #6e8181;
+  background: none;
+  border-radius: 4px;
   box-sizing: border-box;
+  color: #6e8181;
+  font-weight: 400;
+  font-size: 1.25em;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.4);
+  }
+
+  &:-webkit-autofill {
+    background-color: transparent !important;
+  }
+`;
+
+const customTextArea = styled.textarea`
+  ${inputStyles};
+  height: 13.125em;
 `;
 
 const ContactMeSection = styled.div`
@@ -93,25 +116,22 @@ const Description = styled.p`
   font-weight: 500;
 `;
 
-const GetInTouch = styled.h3`
-  margin-bottom: 2em;
+const GetInTouch = styled.h2`
+  margin: 0 0 1em 0;
+  align-self: start;
 `;
 
 const StyledForm = styled(Form)`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  background-color: #0f2338;
   padding: 1em;
+  border-radius: 0.75em;
 `;
 
 const StyledField = styled(Field)`
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  ${inputStyles}
 `;
 
 const ErrorMessageContainer = styled.div`
@@ -177,26 +197,46 @@ const ContactMe = () => {
         >
           <StyledForm>
             <GetInTouch>Get in touch</GetInTouch>
-            <div style={{ width: "100%" }}>
-              <StyledField type="text" id="fullName" name="fullName" />
+            <div>
+              <StyledField
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Full name *"
+              />
               <ErrorMessageContainer>
                 <ErrorMessage name="fullName" className="error" />
               </ErrorMessageContainer>
             </div>
-            <div style={{ width: "100%" }}>
-              <StyledField type="text" id="email" name="email" />
+            <div>
+              <StyledField
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email address *"
+              />
               <ErrorMessageContainer>
                 <ErrorMessage name="email" className="error" />
               </ErrorMessageContainer>
             </div>
-            <div style={{ width: "100%" }}>
-              <StyledField type="text" id="subject" name="subject" />
+            <div>
+              <StyledField
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject *"
+              />
               <ErrorMessageContainer>
                 <ErrorMessage name="subject" className="error" />
               </ErrorMessageContainer>
             </div>
-            <div style={{ width: "100%" }}>
-              <Field as={customTextArea} id="message" name="message" />
+            <div>
+              <Field
+                as={customTextArea}
+                id="message"
+                name="message"
+                placeholder="Message "
+              />
               <ErrorMessageContainer>
                 <ErrorMessage name="message" component="div" />
               </ErrorMessageContainer>
