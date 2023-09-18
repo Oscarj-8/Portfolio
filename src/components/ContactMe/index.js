@@ -3,6 +3,11 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+const customTextArea = styled.textarea`
+  width: 100%;
+  box-sizing: border-box;
+`;
+
 const ContactMeSection = styled.div`
   font-family: "Montserrat", sans-serif;
   width: 100%;
@@ -18,7 +23,6 @@ const ContactMeSection = styled.div`
 `;
 
 const ContactMeLeft = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,13 +89,43 @@ const Header = styled.h2`
 const Description = styled.p`
   margin: 0;
   font-size: 1.125em;
-  color: #7E908E;
+  color: #7e908e;
   font-weight: 500;
-}
 `;
 
 const GetInTouch = styled.h3`
-  margin: 0;
+  margin-bottom: 2em;
+`;
+
+const StyledForm = styled(Form)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 1em;
+`;
+
+const StyledField = styled(Field)`
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+`;
+
+const ErrorMessageContainer = styled.div`
+  color: red;
+  margin-bottom: 8px;
+`;
+
+const StyledButton = styled.button`
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 `;
 
 const validationSchema = Yup.object().shape({
@@ -133,7 +167,6 @@ const ContactMe = () => {
             potential collaborations
           </Description>
         </RightTopSection>
-
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -142,26 +175,35 @@ const ContactMe = () => {
             resetForm();
           }}
         >
-          <Form>
+          <StyledForm>
             <GetInTouch>Get in touch</GetInTouch>
-            <div>
-              <Field type="text" id="fullName" name="fullName" />
-              <ErrorMessage name="fullName" component="div" />
+            <div style={{ width: "100%" }}>
+              <StyledField type="text" id="fullName" name="fullName" />
+              <ErrorMessageContainer>
+                <ErrorMessage name="fullName" className="error" />
+              </ErrorMessageContainer>
             </div>
-            <div>
-              <Field type="text" id="email" name="email" />
-              <ErrorMessage name="email" component="div" />
+            <div style={{ width: "100%" }}>
+              <StyledField type="text" id="email" name="email" />
+              <ErrorMessageContainer>
+                <ErrorMessage name="email" className="error" />
+              </ErrorMessageContainer>
             </div>
-            <div>
-              <Field type="text" id="subject" name="subject" />
-              <ErrorMessage name="subject" component="div" />
+            <div style={{ width: "100%" }}>
+              <StyledField type="text" id="subject" name="subject" />
+              <ErrorMessageContainer>
+                <ErrorMessage name="subject" className="error" />
+              </ErrorMessageContainer>
             </div>
-            <div>
-              <Field as="textarea" id="message" name="message" />
-              <ErrorMessage name="message" component="div" />
+            <div style={{ width: "100%" }}>
+              <Field as={customTextArea} id="message" name="message" />
+              <ErrorMessageContainer>
+                <ErrorMessage name="message" component="div" />
+              </ErrorMessageContainer>
             </div>
-            <button type="submit">Send message</button>
-          </Form>
+
+            <StyledButton type="submit">Send message</StyledButton>
+          </StyledForm>
         </Formik>
       </ContactMeRight>
     </ContactMeSection>
