@@ -22,16 +22,26 @@ const NavContainer = styled.div`
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  max-width: 81em;
+  // max-width: 81em;
   padding: 0em 1em;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
   }
+
   @media screen and (min-width: 994px) {
     padding: 0 5em;
   }
+
   @media screen and (min-width: 1200px) {
     padding: 0 7em;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 0 10em;
+  }
+
+  @media screen and (min-width: 1800px) {
+    padding: 0 13em;
   }
 `;
 

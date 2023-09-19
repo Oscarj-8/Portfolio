@@ -12,20 +12,30 @@ const HeroContainer = styled.div`
   justify-content: center;
   gap: 2em;
   margin-bottom: 1em;
+
   @media screen and (min-width: 500px) {
     padding: 0 2em;
     margin-bottom: 2.5em;
   }
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     height: 50vh;
     margin-bottom: 0;
   }
+
   @media screen and (min-width: 994px) {
     padding: 0 5em;
   }
+
   @media screen and (min-width: 1200px) {
-    padding: 0em 6em;
+    padding: 0em;
+    height: 70vh;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0em;
+    margin-bottom: 9em;
   }
 `;
 

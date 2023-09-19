@@ -38,9 +38,10 @@ const Description = styled.h1`
 const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: strech;
   justify-content: center;
   gap: 3em;
+
   @media screen and (min-width: 1200px) {
     width: 70%;
   }
@@ -67,6 +68,10 @@ const Skill = styled.div`
   @media screen and (min-width: 500px) {
     width: 80%;
   }
+
+  @media screen and (min-width: 994px) {
+    width: 36%;
+  }
 `;
 
 const SkillTitle = styled.h3`
@@ -78,11 +83,11 @@ const SkillTitle = styled.h3`
 const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   align-items: center;
   justify-content: center;
   gap: 1.25em;
   align-self: center;
+  margin-bottom: 1em;
 `;
 
 const SkillItem = styled.div`
