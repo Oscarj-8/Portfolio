@@ -18,7 +18,7 @@ const inputStyles = `
 
   &:focus {
     outline: none;
-    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.2);
   }
 
   &:-webkit-autofill {
@@ -95,14 +95,18 @@ const ContactMeRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 1em;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 4em;
 `;
 
 const RightTopSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
+  align-items: center;
+  text-align: center;
 `;
 
 const Header = styled.h2`
@@ -114,6 +118,10 @@ const Description = styled.p`
   font-size: 1.125em;
   color: #7e908e;
   font-weight: 500;
+
+  @media screen and (min-width: 500px) {
+    width: 85%;
+  }
 `;
 
 const GetInTouch = styled.h2`
@@ -126,7 +134,7 @@ const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   background-color: #0f2338;
-  padding: 1em;
+  padding: 1.5em;
   border-radius: 0.75em;
 `;
 
@@ -140,12 +148,19 @@ const ErrorMessageContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
-  padding: 8px 16px;
+  padding: 1em 1.5em;
   background-color: #333;
-  color: #fff;
+  color: ${({ theme }) => theme.projectTagColor};
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    ${({ theme }) => theme.buttonColor},
+    ${({ theme }) => theme.secondaryColor}
+  );
 `;
 
 const validationSchema = Yup.object().shape({

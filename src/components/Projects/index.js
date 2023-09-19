@@ -36,13 +36,15 @@ const Description = styled.h1`
 `;
 
 const ProjectsContainer = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;

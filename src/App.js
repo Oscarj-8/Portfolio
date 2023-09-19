@@ -15,6 +15,7 @@ const Body = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 `;
 
 // const CircleOne = styled.div`

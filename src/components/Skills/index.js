@@ -55,13 +55,17 @@ const Skill = styled.div`
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   border-radius: 0.5em;
   min-height: 18em;
-  flex-grow: 1;
+  // flex-grow: 1;
   padding: 1em;
   box-shadow: 2px 2px 10px rgba(27, 154, 130, 0.5);
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: scale(1.03);
     box-shadow: 2px 2px 20px rgba(27, 154, 130, 0.5);
+  }
+
+  @media screen and (min-width: 500px) {
+    width: 80%;
   }
 `;
 

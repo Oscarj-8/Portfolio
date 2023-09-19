@@ -11,13 +11,15 @@ const HeroContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2em;
-  height: calc(100vh - 4em);
+  margin-bottom: 1em;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
+    margin-bottom: 2.5em;
   }
   @media screen and (min-width: 768px) {
-    padding: 0 4em;
     flex-direction: row;
+    height: 50vh;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 994px) {
     padding: 0 5em;
