@@ -7,6 +7,7 @@ const ProjectsSection = styled.div`
   padding: 0em 1em;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2em;
 `;
 
 const Wrapper = styled.div`
@@ -33,23 +34,33 @@ const Description = styled.h1`
   color: ${({ theme }) => theme.descriptionColor};
   font-weight: 500;
   text-align: center;
+  margin: 0 0 1em 0;
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
-  align-items: center;
+  align-items: strech;
   justify-content: center;
+
   @media screen and (min-width: 768px) {
+    gap: 2em;
     grid-template-columns: repeat(2, 1fr);
   }
+
   @media screen and (min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
 
 const Project = styled.div`
+  cursor: pointer;
   background-color: ${({ theme }) => theme.projectCardColor};
   max-width: 19em;
   padding: 1.5em;
@@ -58,6 +69,12 @@ const Project = styled.div`
   justify-content: center;
   gap: 1em;
   border-radius: 0.25em;
+  box-shadow: 2px 2px 20px rgba(20, 116, 105, 0.5);
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -103,6 +120,8 @@ const GoToButton = styled.button`
   font-size: 1em;
   font-weight: 500;
   letter-spacing: 1px;
+  cursor: pointer;
+
   &:hover {
     background-color: #260149;
   }

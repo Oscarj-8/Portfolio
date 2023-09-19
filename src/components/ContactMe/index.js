@@ -26,42 +26,49 @@ const inputStyles = `
   }
 `;
 
-const customTextArea = styled.textarea`
-  ${inputStyles};
-  height: 13.125em;
-`;
-
 const ContactMeSection = styled.div`
   font-family: "Montserrat", sans-serif;
-  width: 100%;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  padding: 0 2em;
+  gap: 2em;
   @media screen and (min-width: 992px) {
+    gap: 0;
     flex-direction: row;
   }
 `;
 
 const ContactMeLeft = styled.div`
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 1em;
+
+  @media screen and (min-width: 992px) {
+  }
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
   margin: 0;
+  @media screen and (min-width: 992px) {
+    font-size: 2em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 3.25em;
+  }
 `;
 
 const Message = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.descriptionColor};
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const EmailSection = styled.div`
@@ -92,13 +99,11 @@ const Email = styled.p`
 `;
 
 const ContactMeRight = styled.div`
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-
-  @media screen and (min-width: 768px) {
-    padding: 0 4em;
 `;
 
 const RightTopSection = styled.div`
@@ -114,7 +119,7 @@ const Header = styled.h2`
 `;
 
 const Description = styled.p`
-  margin: 0;
+  margin: 0 0 1em 0;
   font-size: 1.125em;
   color: #7e908e;
   font-weight: 500;
@@ -142,6 +147,11 @@ const StyledField = styled(Field)`
   ${inputStyles}
 `;
 
+const customTextArea = styled.textarea`
+  ${inputStyles};
+  height: 13.125em;
+`;
+
 const ErrorMessageContainer = styled.div`
   color: red;
   margin-bottom: 8px;
@@ -161,13 +171,21 @@ const StyledButton = styled.button`
     ${({ theme }) => theme.buttonColor},
     ${({ theme }) => theme.secondaryColor}
   );
+
+  &:hover {
+    color: #d6c8e3;
+    background: linear-gradient(
+      to right,
+      rgba(74, 29, 117, 0.3),
+      rgba(27, 154, 130, 0.3)
+    );
+  }
 `;
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required("Name is required"),
   email: Yup.string().required("Email is required"),
   subject: Yup.string().required("Subject is required"),
-  message: Yup.string().required("Message is required"),
 });
 
 const ContactMe = () => {
@@ -252,9 +270,6 @@ const ContactMe = () => {
                 name="message"
                 placeholder="Message "
               />
-              <ErrorMessageContainer>
-                <ErrorMessage name="message" component="div" />
-              </ErrorMessageContainer>
             </div>
 
             <StyledButton type="submit">Send message</StyledButton>

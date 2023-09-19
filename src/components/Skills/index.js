@@ -7,6 +7,7 @@ const SkillsSection = styled.div`
   color: ${({ theme }) => theme.textWhite};
   font-family: "Montserrat", sans-serif;
   padding: 0 1em;
+  margin-bottom: 2em;
 `;
 
 const SkillsWrapper = styled.div`
@@ -33,6 +34,7 @@ const Description = styled.h1`
   font-size: 1.125em;
   color: ${({ theme }) => theme.descriptionColor};
   font-weight: 500;
+  margin: 0 0 1em 0;
 `;
 
 const SkillsContainer = styled.div`
@@ -41,17 +43,13 @@ const SkillsContainer = styled.div`
   align-items: strech;
   justify-content: center;
   gap: 3em;
-
-  @media screen and (min-width: 1200px) {
-    width: 70%;
-  }
 `;
 
 const Skill = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 31.5em;
+  max-width: 35em;
   gap: 2em;
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   border-radius: 0.5em;
@@ -69,8 +67,16 @@ const Skill = styled.div`
     width: 80%;
   }
 
+  @media screen and (min-width: 500px) {
+    width: 60%;
+  }
+
   @media screen and (min-width: 994px) {
     width: 36%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 30%;
   }
 `;
 

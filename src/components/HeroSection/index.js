@@ -59,6 +59,7 @@ const ImageSec = styled.img`
   border: 3px solid ${({ theme }) => theme.tertiaryColor};
   @media screen and (min-width: 500px) {
     width: 60%;
+    max-width: 50%;
   }
   @media screen and (min-width: 1200px) {
     width: 30%;
@@ -123,6 +124,7 @@ const HeroButtons = styled.div`
   display: flex;
   justify-content: center;
   gap: 2em;
+
   @media screen and (min-width: 768px) {
     justify-content: start;
   }
@@ -139,6 +141,8 @@ const ResumeButton = styled.button`
   color: ${({ theme }) => theme.textWhite};
   border-radius: 0.25em;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
   &:hover {
     background-color: transparent;
     border: 2px solid ${({ theme }) => theme.buttonColor};
@@ -161,6 +165,8 @@ const GithubButton = styled.button`
   color: ${({ theme }) => theme.secondaryColor};
   border-radius: 0.25em;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
   &:hover {
     background-color: ${({ theme }) => theme.secondaryColor};
     border: 2px solid transparent;
