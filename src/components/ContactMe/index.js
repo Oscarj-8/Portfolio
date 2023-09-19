@@ -6,7 +6,7 @@ import * as Yup from "yup";
 const inputStyles = `
  font-family: "Montserrat", sans-serif;
   width: 100%;
-  padding: 0.8em;
+  padding: 0.5em;
   margin-bottom: 8px;
   border: 2px solid #6e8181;
   background: none;
@@ -14,7 +14,7 @@ const inputStyles = `
   box-sizing: border-box;
   color: #6e8181;
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1em;
 
   &:focus {
     outline: none;
@@ -35,6 +35,7 @@ const ContactMeSection = styled.div`
   justify-content: center;
   padding: 0 2em;
   gap: 2em;
+  margin-bottom: 2em;
   @media screen and (min-width: 992px) {
     gap: 0;
     flex-direction: row;
@@ -49,9 +50,6 @@ const ContactMeLeft = styled.div`
   justify-content: center;
   text-align: center;
   gap: 1em;
-
-  @media screen and (min-width: 992px) {
-  }
 `;
 
 const Title = styled.h1`
@@ -61,7 +59,7 @@ const Title = styled.h1`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 3.25em;
+    font-size: 3em;
   }
 `;
 
@@ -114,7 +112,7 @@ const RightTopSection = styled.div`
   text-align: center;
 `;
 
-const Header = styled.h2`
+const Header = styled.h1`
   margin: 0;
 `;
 
@@ -141,20 +139,40 @@ const StyledForm = styled(Form)`
   background-color: #0f2338;
   padding: 1.5em;
   border-radius: 0.75em;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 `;
 
 const StyledField = styled(Field)`
   ${inputStyles}
+
+  @media screen and (min-width: 500px) {
+    padding: 0.6em;
+    font-size: 1.15em;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 0.8em;
+    font-size: 1em;
+  }
 `;
 
 const customTextArea = styled.textarea`
   ${inputStyles};
   height: 13.125em;
+
+  @media screen and (min-width: 500px) {
+    padding: 0.6em;
+    font-size: 1.15em;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 0.8em;
+    font-size: 1em;
+  }
 `;
 
 const ErrorMessageContainer = styled.div`
-  color: red;
+  color: #ff0000;
   margin-bottom: 8px;
+  font-weight: 400;
 `;
 
 const StyledButton = styled.button`
@@ -176,8 +194,8 @@ const StyledButton = styled.button`
     color: #d6c8e3;
     background: linear-gradient(
       to right,
-      rgba(74, 29, 117, 0.3),
-      rgba(27, 154, 130, 0.3)
+      rgba(74, 29, 117, 0.5),
+      rgba(27, 154, 130, 0.5)
     );
   }
 `;
