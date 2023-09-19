@@ -59,7 +59,9 @@ const Title = styled.h1`
   }
 
   @media screen and (min-width: 1200px) {
+    width: 80%;
     font-size: 3em;
+    font-weight: 600;
   }
 `;
 
@@ -220,7 +222,7 @@ const ContactMe = () => {
         <Title>
           Let's chat.
           <br />
-          Tell me about yout Project
+          Tell me about your Project
         </Title>
         <Message>🤟🏼 Let's create something together</Message>
         <EmailSection>
