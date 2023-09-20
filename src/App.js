@@ -6,6 +6,7 @@ import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import ContactMe from "./components/ContactMe";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 const Body = styled.div`
   background: ${({ theme }) => theme.bg};
@@ -65,6 +66,7 @@ function App() {
         <Skills />
         <Projects />
         <ContactMe />
+        <Footer />
       </Body>
     </ThemeProvider>
   );

@@ -38,12 +38,15 @@ const Description = styled.h1`
 `;
 
 const SkillsContainer = styled.div`
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: strech;
   justify-content: center;
   gap: 3em;
+
+  @media screen and (min-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 const Skill = styled.div`
@@ -65,10 +68,6 @@ const Skill = styled.div`
 
   @media screen and (min-width: 500px) {
     width: 80%;
-  }
-
-  @media screen and (min-width: 500px) {
-    width: 60%;
   }
 
   @media screen and (min-width: 994px) {

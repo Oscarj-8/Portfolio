@@ -36,6 +36,7 @@ const ContactMeSection = styled.div`
   padding: 0 2em;
   gap: 2em;
   margin-bottom: 2em;
+
   @media screen and (min-width: 992px) {
     gap: 0;
     flex-direction: row;
@@ -50,6 +51,12 @@ const ContactMeLeft = styled.div`
   justify-content: center;
   text-align: center;
   gap: 1em;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    align-items: start;
+    margin-left: 4em;
+  }
 `;
 
 const Title = styled.h1`

@@ -104,11 +104,11 @@ const Span = styled.span`
 `;
 
 const Description = styled.div`
-  color: ${({ theme }) => theme.descriptionColor};
+  color: #fff;
   line-height: 1.6em;
   letter-spacing: 1.5px;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1em;
   @media screen and (min-width: 768px) {
     text-align: left;
@@ -133,7 +133,6 @@ const HeroButtons = styled.div`
 const ResumeButton = styled.button`
   position: relative;
   font-size: 1em;
-  font-weight: 500;
   padding: 0.7em;
   letter-spacing: 1px;
   background-color: ${({ theme }) => theme.buttonColor};
@@ -151,13 +150,13 @@ const ResumeButton = styled.button`
   @media screen and (min-width: 1200px) {
     padding: 1em 1.5em;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
   }
 `;
 
 const GithubButton = styled.button`
   font-size: 1em;
-  font-weight: 500;
+
   padding: 0.7em;
   letter-spacing: 1px;
   background: none;

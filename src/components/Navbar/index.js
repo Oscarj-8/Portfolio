@@ -137,7 +137,7 @@ const CloseButton = styled.button`
   padding-left: 0.5em;
 `;
 
-const Navbar = () => {
+const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
   const [isOpen, setIsOpen] = useState(false);
   const CloseMobileNav = () => {
     setIsOpen(!isOpen);
@@ -145,19 +145,25 @@ const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo>
-          <h2>AM</h2>
-        </NavLogo>
-        <MobileIcon>
-          <FaBars onClick={CloseMobileNav} color="#fff" />
-        </MobileIcon>
+        {showNavLogoAndMobileIcons && (
+          <>
+            <NavLogo>
+              <h2>AM</h2>
+            </NavLogo>
+            <MobileIcon>
+              <FaBars onClick={CloseMobileNav} color="#fff" />
+            </MobileIcon>
+          </>
+        )}
 
-        <NavItems>
-          <NavLink>About</NavLink>
-          <NavLink>Skills</NavLink>
-          <NavLink>Projects</NavLink>
-          <NavLink>Contact</NavLink>
-        </NavItems>
+        {showNavItems && (
+          <NavItems>
+            <NavLink>About</NavLink>
+            <NavLink>Skills</NavLink>
+            <NavLink>Projects</NavLink>
+            <NavLink>Contact</NavLink>
+          </NavItems>
+        )}
       </NavContainer>
       {isOpen && (
         <MobileNav open={isOpen}>

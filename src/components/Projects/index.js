@@ -45,7 +45,7 @@ const Description = styled.h1`
 const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
+  gap: 2em;
   align-items: strech;
   justify-content: center;
 
