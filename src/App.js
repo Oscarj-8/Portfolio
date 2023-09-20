@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import ContactMe from "./components/ContactMe";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import LastLine from "./components/LastLine";
 
 const Body = styled.div`
   background: ${({ theme }) => theme.bg};
@@ -67,6 +68,7 @@ function App() {
         <Projects />
         <ContactMe />
         <Footer />
+        <LastLine />
       </Body>
     </ThemeProvider>
   );

@@ -6,6 +6,7 @@ import {
   FaTelegram,
   FaTwitter,
   FaInstagram,
+  FaRegCopyright,
 } from "react-icons/fa";
 
 const FooterContainer = styled.div`
@@ -14,7 +15,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 3em;
 `;
 
 const Abdulahi = styled.p`
@@ -67,6 +68,15 @@ const SocialIcons = styled.div`
   gap: 2em;
 `;
 
+const TradeMark = styled.div`
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;\
+  color: #FFF;
+  margin: 0;
+`;
+
 const IconColor = "#7E908E";
 const Footer = () => {
   return (
@@ -97,6 +107,10 @@ const Footer = () => {
           <FaInstagram size={35} color={IconColor} />
         </a>
       </SocialIcons>
+      <TradeMark>
+        <FaRegCopyright size={24} color="#FFF" /> 2023, Abdulahi Muhammed. all
+        rights reserved.
+      </TradeMark>
     </FooterContainer>
   );
 };
