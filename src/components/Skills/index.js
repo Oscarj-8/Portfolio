@@ -38,6 +38,7 @@ const Description = styled.h1`
 `;
 
 const SkillsContainer = styled.div`
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: strech;
@@ -49,7 +50,6 @@ const Skill = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 35em;
   gap: 2em;
   border: 1px solid ${({ theme }) => theme.secondaryColor};
   border-radius: 0.5em;
