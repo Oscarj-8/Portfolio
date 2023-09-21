@@ -23,7 +23,7 @@ const Line = styled.div`
 
 const TradeMark = styled.div`
   display: flex;
-  gap: 0.25em;
+  gap: 0.2em;
   justify-content: center;
   align-items: center;
   color: #7e908e;
@@ -37,7 +37,7 @@ const LastLine = () => {
   return (
     <Container>
       <TradeMark>
-        <FaRegCopyright size={16} color={IconColor} /> 2023, Abdulahi Muhammed.
+        <FaRegCopyright size={14} color={IconColor} /> 2023, Abdulahi Muhammed.
         all rights reserved.
       </TradeMark>
       <Line />

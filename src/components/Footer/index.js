@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import {
   FaGithub,
   FaLinkedin,
-  FaTelegram,
+  FaTelegramPlane,
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
@@ -14,7 +14,12 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3em;
+  gap: 2em;
+  margin-bottom: 1em;
+
+  @media screen and (min-width: 1200px) {
+    gap: 3em;
+  }
 `;
 
 const Abdulahi = styled.p`
@@ -38,6 +43,14 @@ const FooterNavItems = styled.div`
   gap: 1.5em;
   color: ${({ theme }) => theme.descriptionColor};
   text-align: center;
+
+  @media screen and (min-width: 500px) {
+    gap: 3.5em;
+  }
+
+  @media screen and (min-width: 500px) {
+    gap: 5em;
+  }
 `;
 
 const FooterNavLink = styled.a`
@@ -59,15 +72,31 @@ const FooterNavLink = styled.a`
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    scale: 1.2;
   }
 `;
 
 const SocialIcons = styled.div`
   display: flex;
   gap: 2em;
+
+  @media screen and (min-width: 500px) {
+    gap: 3em;
+  }
+
+  @media screen and (min-width: 500px) {
+    gap: 4em;
+  }
 `;
 
-const IconColor = "#7E908E";
+const FooterIconLink = styled.a`
+  transition: all 0.5s ease-in-out;
+  color: #7e908e;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -81,21 +110,21 @@ const Footer = () => {
         </FooterNavItems>
       </FooterNav>
       <SocialIcons>
-        <a href="https://github.com/Oscarj-8">
-          <FaGithub size={35} color={IconColor} />
-        </a>
-        <a href="www.linkedin.com/in/abdulahi-muhammed-352851285">
-          <FaLinkedin size={35} color={IconColor} />
-        </a>
-        <a href="https://t.me/Osci_walker">
-          <FaTelegram size={35} color={IconColor} />
-        </a>
-        <a href="https://t.me/Osci_walker">
-          <FaTwitter size={35} color={IconColor} />
-        </a>
-        <a href="https://t.me/Osci_walker">
-          <FaInstagram size={35} color={IconColor} />
-        </a>
+        <FooterIconLink href="https://github.com/Oscarj-8">
+          <FaGithub size={35} />
+        </FooterIconLink>
+        <FooterIconLink href="www.linkedin.com/in/abdulahi-muhammed-352851285">
+          <FaLinkedin size={35} />
+        </FooterIconLink>
+        <FooterIconLink href="https://t.me/Osci_walker">
+          <FaTelegramPlane size={35} />
+        </FooterIconLink>
+        <FooterIconLink href="https://t.me/Osci_walker">
+          <FaTwitter size={35} />
+        </FooterIconLink>
+        <FooterIconLink href="https://t.me/Osci_walker">
+          <FaInstagram size={35} />
+        </FooterIconLink>
       </SocialIcons>
     </FooterContainer>
   );
