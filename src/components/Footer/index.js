@@ -1,21 +1,26 @@
 import { styled } from "styled-components";
-
 import {
   FaGithub,
   FaLinkedin,
   FaTelegramPlane,
   FaTwitter,
   FaInstagram,
+  FaRegCopyright,
 } from "react-icons/fa";
 
+import footerRectangle from "../../images/footerRectangle.png";
+
 const FooterContainer = styled.div`
+  background: url(${footerRectangle}) top;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin-bottom: 1em;
+  padding-top: 2em;
 
   @media screen and (min-width: 1200px) {
     gap: 3em;
@@ -45,11 +50,7 @@ const FooterNavItems = styled.div`
   text-align: center;
 
   @media screen and (min-width: 500px) {
-    gap: 3.5em;
-  }
-
-  @media screen and (min-width: 500px) {
-    gap: 5em;
+    gap: 3em;
   }
 `;
 
@@ -72,7 +73,6 @@ const FooterNavLink = styled.a`
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    scale: 1.2;
   }
 `;
 
@@ -83,10 +83,6 @@ const SocialIcons = styled.div`
   @media screen and (min-width: 500px) {
     gap: 3em;
   }
-
-  @media screen and (min-width: 500px) {
-    gap: 4em;
-  }
 `;
 
 const FooterIconLink = styled.a`
@@ -96,6 +92,38 @@ const FooterIconLink = styled.a`
     transform: scale(1.2);
   }
 `;
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -1em;
+  gap: 0.2em;
+`;
+
+const Line = styled.div`
+  width: 100%;
+  height: 5px;
+  background-image: linear-gradient(
+    to right,
+    ${({ theme }) => theme.secondaryColor},
+    ${({ theme }) => theme.tertiaryColor}
+  );
+
+  color: transparent;
+`;
+
+const TradeMark = styled.div`
+  display: flex;
+  gap: 0.2em;
+  justify-content: center;
+  align-items: center;
+  color: #7e908e;
+  margin: 0;
+  font-size: 0.8em;
+`;
+
+const IconColor = "#7E908E";
 
 const Footer = () => {
   return (
@@ -126,6 +154,13 @@ const Footer = () => {
           <FaInstagram size={35} />
         </FooterIconLink>
       </SocialIcons>
+      <Container>
+        <TradeMark>
+          <FaRegCopyright size={14} color={IconColor} /> 2023, Abdulahi
+          Muhammed. all rights reserved.
+        </TradeMark>
+        <Line />
+      </Container>
     </FooterContainer>
   );
 };
