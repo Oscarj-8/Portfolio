@@ -25,16 +25,21 @@ const CircleOne = styled.div`
   &::before {
     content: "";
     position: absolute;
-    width: 30em;
-    height: 30em;
-    opacity: 50%;
+    width: 35em;
+    height: 35em;
+    opacity: 80%;
     border-radius: 50%;
     top: -10em;
-    left: -20em;
-    background-color: ${({ theme }) => theme.secondaryColor};
-    filter: blur(10em);
+    left: -30em;
+    background-color: #25CFA7;
+    filter: blur(20em);
     z-index: 0;
-  }
+
+    @media screen and (min-width: 768px) {
+   top: -5em;
+    left: -80em;
+    }
+
 `;
 
 const CircleTwo = styled.div`
@@ -43,16 +48,18 @@ const CircleTwo = styled.div`
   &::before {
     content: "";
     position: absolute;
-    width: 30em;
-    height: 30em;
-    opacity: 50%;
+    width: 35em;
+    height: 35em;
+    opacity: 45%;
     border-radius: 50%;
-    top: 20em;
-    right: -45em;
-    background-color: ${({ theme }) => theme.tertiaryColor};
+    top: 25em;
+    right: -53em;
+    background-color: #9925CF;
     filter: blur(10em);
     z-index: 0;
   }
+
+  @media screen and (min-width: 500px) {
 `;
 
 function App() {

@@ -12,7 +12,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   gap: 2em;
   margin-bottom: 1em;
-
+  z-index: 2;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
     margin-bottom: 2.5em;
@@ -57,6 +57,7 @@ const ImageSec = styled.img`
   width: 65%;
   border-radius: 50%;
   border: 3px solid ${({ theme }) => theme.tertiaryColor};
+  box-shadow: 18px 16px 100px rgba(0, 0, 0, 0.5);
   @media screen and (min-width: 500px) {
     width: 60%;
     max-width: 50%;
