@@ -31,15 +31,23 @@ const CircleOne = styled.div`
     border-radius: 50%;
     top: -10em;
     left: -30em;
-    background-color: #25CFA7;
+    background-color: #25cfa7;
     filter: blur(20em);
     z-index: 0;
 
-    @media screen and (min-width: 768px) {
-   top: -5em;
-    left: -80em;
+    @media screen and (min-width: 500px) {
+      opacity: 40%;
+      left: -25em;
     }
 
+    @media screen and (min-width: 1200px) {
+      left: -15em;
+    }
+
+    @media screen and (min-width: 1400px) {
+      opacity: 100%;
+    }
+  }
 `;
 
 const CircleTwo = styled.div`
@@ -54,12 +62,43 @@ const CircleTwo = styled.div`
     border-radius: 50%;
     top: 25em;
     right: -53em;
-    background-color: #9925CF;
+    background-color: #9925cf;
     filter: blur(10em);
     z-index: 0;
-  }
 
-  @media screen and (min-width: 500px) {
+    @media screen and (min-width: 500px) {
+      opacity: 30%;
+      top: 25em;
+      right: -60em;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 5em;
+      right: -70em;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 5em;
+      right: -80em;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 10em;
+      right: -85em;
+    }
+
+    @media screen and (min-width: 1400px) {
+      right: -90em;
+    }
+
+    @media screen and (min-width: 1600px) {
+      right: -105em;
+    }
+
+    @media screen and (min-width: 1800px) {
+      right: -115em;
+    }
+  }
 `;
 
 function App() {
