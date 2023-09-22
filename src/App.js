@@ -45,7 +45,7 @@ const CircleOne = styled.div`
     }
 
     @media screen and (min-width: 1400px) {
-      opacity: 100%;
+      opacity: 70%;
     }
   }
 `;
