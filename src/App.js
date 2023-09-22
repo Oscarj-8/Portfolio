@@ -16,50 +16,50 @@ const Body = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 3em;
 `;
 
-// const CircleOne = styled.div`
-//   position: absolute;
+const CircleOne = styled.div`
+  position: absolute;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 30em;
-//     height: 30em;
-//     opacity: 50%;
-//     border-radius: 50%;
-//     top: -10em;
-//     left: -20em;
-//     background-color: ${({ theme }) => theme.secondaryColor};
-//     filter: blur(10em);
-//     z-index: 0;
-//   }
-// `;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    opacity: 50%;
+    border-radius: 50%;
+    top: -10em;
+    left: -20em;
+    background-color: ${({ theme }) => theme.secondaryColor};
+    filter: blur(10em);
+    z-index: 0;
+  }
+`;
 
-// const CircleTwo = styled.div`
-//   position: absolute;
+const CircleTwo = styled.div`
+  position: absolute;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 30em;
-//     height: 30em;
-//     opacity: 50%;
-//     border-radius: 50%;
-//     top: 20em;
-//     right: -45em;
-//     background-color: ${({ theme }) => theme.tertiaryColor};
-//     filter: blur(10em);
-//     z-index: 0;
-//   }
-// `;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    opacity: 50%;
+    border-radius: 50%;
+    top: 20em;
+    right: -45em;
+    background-color: ${({ theme }) => theme.tertiaryColor};
+    filter: blur(10em);
+    z-index: 0;
+  }
+`;
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      {/* <CircleOne />
-      <CircleTwo /> */}
+      <CircleOne />
+      <CircleTwo />
       <Body>
         <Navbar />
         <HeroSection />
