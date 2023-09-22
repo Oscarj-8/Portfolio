@@ -32,7 +32,7 @@ const CircleOne = styled.div`
     top: -10em;
     left: -30em;
     background-color: #25cfa7;
-    filter: blur(20em);
+    filter: blur(10em);
     z-index: 0;
 
     @media screen and (min-width: 500px) {
