@@ -27,7 +27,7 @@ const CircleOne = styled.div`
     position: absolute;
     width: 35em;
     height: 35em;
-    opacity: 80%;
+    opacity: 50%;
     border-radius: 50%;
     top: -10em;
     left: -30em;
@@ -58,7 +58,7 @@ const CircleTwo = styled.div`
     position: absolute;
     width: 35em;
     height: 35em;
-    opacity: 45%;
+    opacity: 30%;
     border-radius: 50%;
     top: 25em;
     right: -53em;
@@ -67,7 +67,7 @@ const CircleTwo = styled.div`
     z-index: 0;
 
     @media screen and (min-width: 500px) {
-      opacity: 30%;
+      opacity: 40%;
       top: 25em;
       right: -60em;
     }
@@ -96,7 +96,8 @@ const CircleTwo = styled.div`
     }
 
     @media screen and (min-width: 1800px) {
-      right: -115em;
+      top: 15em;
+      right: -120em;
     }
   }
 `;
