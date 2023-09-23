@@ -19,122 +19,43 @@ const Body = styled.div`
   gap: 3em;
 `;
 
-// const CircleOne = styled.div`
-//   position: absolute;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 35em;
-//     height: 35em;
-//     opacity: 50%;
-//     border-radius: 50%;
-//     top: -10em;
-//     left: -30em;
-//     background-color: #25cfa7;
-//     filter: blur(10em);
-//     z-index: 0;
-
-//     @media screen and (min-width: 500px) {
-//       opacity: 40%;
-//       left: -25em;
-//     }
-
-//     @media screen and (min-width: 1200px) {
-//       left: -15em;
-//     }
-
-//     @media screen and (min-width: 1400px) {
-//       opacity: 70%;
-//     }
-//   }
-// `;
-
-// const CircleTwo = styled.div`
-//   position: absolute;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 35em;
-//     height: 35em;
-//     opacity: 30%;
-//     border-radius: 50%;
-//     top: 25em;
-//     right: -53em;
-//     background-color: #9925cf;
-//     filter: blur(10em);
-//     z-index: 0;
-
-//     @media screen and (min-width: 500px) {
-//       opacity: 40%;
-//       top: 25em;
-//       right: -60em;
-//     }
-
-//     @media screen and (min-width: 768px) {
-//       top: 5em;
-//       right: -70em;
-//     }
-
-//     @media screen and (min-width: 768px) {
-//       top: 5em;
-//       right: -80em;
-//     }
-
-//     @media screen and (min-width: 1200px) {
-//       top: 10em;
-//       right: -85em;
-//     }
-
-//     @media screen and (min-width: 1400px) {
-//       right: -90em;
-//     }
-
-//     @media screen and (min-width: 1600px) {
-//       right: -105em;
-//     }
-
-//     @media screen and (min-width: 1800px) {
-//       top: 15em;
-//       right: -120em;
-//     }
-//   }
-// `;
-
 const CircleOne = styled.div`
   position: absolute;
   background-color: #25cfa7;
   border-radius: 50%;
-  width: 30vw;
+  width: 40vw;
   height: 60vw;
   top: 0vh;
-  left: -8vw;
-  filter: blur(10em);
+  left: -5vw;
+  filter: blur(5em);
 
   @media screen and (min-width: 500px) {
-    opacity: 40%;
+    opacity: 80%;
     top: -10vh;
-    left: -12vw;
+    filter: blur(10em);
   }
 
   @media screen and (min-width: 768px) {
-    top: -30vh;
-    opacity: 50%;
+    top: -25vh;
+    opacity: 60%;
+    left: -15vw;
   }
 
   @media screen and (min-width: 992px) {
-    opacity: 40%;
+    top: -35vh;
+    left: -10vw;
   }
 
   @media screen and (min-width: 1200px) {
-    top: -40vh;
+    top: -55vh;
     opacity: 70%;
   }
 
   @media screen and (min-width: 1440px) {
+    width: 30vw;
     top: -70vh;
-    opacity: 80%;
+    filter: blur(8em);
+    opacity: 90%;
   }
 `;
 
