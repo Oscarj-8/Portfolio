@@ -20,7 +20,7 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   // max-width: 81em;
   padding: 0em 1em;

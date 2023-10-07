@@ -12,7 +12,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   gap: 2em;
   margin-bottom: 1em;
-  z-index: 2;
+  z-index: 1;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
     margin-bottom: 2.5em;
