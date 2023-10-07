@@ -8,6 +8,7 @@ const ProjectsSection = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2em;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
