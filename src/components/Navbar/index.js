@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+import { Link as ScrollLink, animateScroll } from "react-scroll";
+
 import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
@@ -20,9 +22,8 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
-  // max-width: 81em;
   padding: 0em 1em;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
@@ -32,7 +33,7 @@ const NavContainer = styled.div`
     padding: 0 5em;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1500) {
     padding: 0 7em;
   }
 
@@ -74,7 +75,7 @@ const NavItems = styled.ul`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(ScrollLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colorWhite};
   font-weight: 600;
@@ -101,12 +102,15 @@ const MobileNav = styled.div`
   top: 0;
   right: 0;
   background-color: ${({ theme }) => theme.bg};
-  width: 50%;
+  width: 80%;
   height: 100vh;
   transition: all 0.5s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   z-index: 1;
   box-shadow: -10px 1px 20px rgba(0, 0, 0, 0.5);
+
+  @media screen and ( 500px <= width <= 768px) {
+    width: 60%;
 `;
 
 const MobileNavLinks = styled.div`
@@ -135,6 +139,7 @@ const CloseButton = styled.button`
   font-size: 3em;
   color: #fff;
   padding-left: 0.5em;
+  cursor: pointer;
 `;
 
 const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
@@ -158,10 +163,16 @@ const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
 
         {showNavItems && (
           <NavItems>
-            <NavLink>About</NavLink>
-            <NavLink>Skills</NavLink>
-            <NavLink>Projects</NavLink>
-            <NavLink>Contact</NavLink>
+            <NavLink to="about">About</NavLink>
+            <NavLink to="skills" smooth={true} duration={1500}>
+              Skills
+            </NavLink>
+            <NavLink to="projects" smooth={true} duration={1500}>
+              Projects
+            </NavLink>
+            <NavLink to="contact" smooth={true} duration={1500}>
+              Contact
+            </NavLink>
           </NavItems>
         )}
       </NavContainer>

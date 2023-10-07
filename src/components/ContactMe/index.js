@@ -224,7 +224,7 @@ const ContactMe = () => {
   };
 
   return (
-    <ContactMeSection>
+    <ContactMeSection id="contact">
       <ContactMeLeft>
         <Title>
           Let's chat.

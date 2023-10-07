@@ -122,7 +122,7 @@ const SkillImage = styled.img`
 
 const Skills = () => {
   return (
-    <SkillsSection>
+    <SkillsSection id="skills">
       <SkillsWrapper>
         <Title>Skills</Title>
         <Description>

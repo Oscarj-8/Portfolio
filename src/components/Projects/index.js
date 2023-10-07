@@ -129,7 +129,7 @@ const GoToButton = styled.button`
 
 const Projects = (index) => {
   return (
-    <ProjectsSection>
+    <ProjectsSection id="projects">
       <Wrapper>
         <Title>Projects</Title>
         <Description>
