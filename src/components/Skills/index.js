@@ -8,7 +8,6 @@ const SkillsSection = styled.div`
   font-family: "Montserrat", sans-serif;
   padding: 0 1em;
   margin-bottom: 2em;
-  z-index: 2;
 `;
 
 const SkillsWrapper = styled.div`
