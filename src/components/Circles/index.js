@@ -35,7 +35,7 @@ export const CircleOne = styled.div`
   @media screen and (min-width: 1440px) {
     width: 30vw;
     top: -70vh;
-    opacity: 90%;
+    opacity: 80%;
   }
 `;
 

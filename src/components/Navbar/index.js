@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-
 import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
@@ -124,7 +123,7 @@ const MobileNavLinks = styled.div`
   margin-top: 3em;
 `;
 
-const MobileNavLink = styled(LinkR)`
+const MobileNavLink = styled(ScrollLink)`
   text-decoration: none;
   cursor: pointer;
   font-weight: 700;
@@ -181,10 +180,42 @@ const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
           <CloseButton onClick={CloseMobileNav}>&times;</CloseButton>
 
           <MobileNavLinks>
-            <MobileNavLink onClick={CloseMobileNav}>About</MobileNavLink>
+            {/* <MobileNavLink onClick={CloseMobileNav}>About</MobileNavLink>
             <MobileNavLink onClick={CloseMobileNav}>Skills</MobileNavLink>
             <MobileNavLink onClick={CloseMobileNav}>Projects</MobileNavLink>
-            <MobileNavLink onClick={CloseMobileNav}>Contact</MobileNavLink>
+            <MobileNavLink onClick={CloseMobileNav}>Contact</MobileNavLink> */}
+            <MobileNavLink
+              onClick={CloseMobileNav}
+              to="about"
+              smooth={true}
+              duration={1500}
+            >
+              About
+            </MobileNavLink>
+            <MobileNavLink
+              onClick={CloseMobileNav}
+              to="skills"
+              smooth={true}
+              duration={1500}
+            >
+              Skills
+            </MobileNavLink>
+            <MobileNavLink
+              onClick={CloseMobileNav}
+              to="projects"
+              smooth={true}
+              duration={1500}
+            >
+              Projects
+            </MobileNavLink>
+            <MobileNavLink
+              onClick={CloseMobileNav}
+              to="contact"
+              smooth={true}
+              duration={1500}
+            >
+              Contact
+            </MobileNavLink>
           </MobileNavLinks>
         </MobileNav>
       )}
