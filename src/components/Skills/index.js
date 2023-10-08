@@ -45,7 +45,7 @@ const SkillsContainer = styled.div`
   gap: 3em;
 
   @media screen and (min-width: 1200px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
@@ -68,6 +68,10 @@ const Skill = styled.div`
 
   @media screen and (min-width: 500px) {
     width: 80%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 68%;
   }
 
   @media screen and (min-width: 994px) {

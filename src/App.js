@@ -56,7 +56,7 @@ const CircleOne = styled.div`
     width: 30vw;
     top: -70vh;
     filter: blur(8em);
-    opacity: 90%;
+    opacity: 80%;
   }
 `;
 
@@ -65,7 +65,7 @@ const CircleTwo = styled.div`
   background-color: #9925cf;
   border-radius: 50%;
   width: 30vw;
-  height: 80vw;
+  height: 60vw;
   top: 65vh;
   right: -8vw;
   filter: blur(10em);
@@ -118,10 +118,6 @@ const CircleThree = styled.div`
     top: 210vh;
   }
 
-  @media screen and (min-width: 992px) {
-    top: -35vh;
-  }
-
   @media screen and (min-width: 1200px) {
     opacity: 70%;
   }
@@ -129,7 +125,8 @@ const CircleThree = styled.div`
   @media screen and (min-width: 1440px) {
     width: 30vw;
     filter: blur(18em);
-    opacity: 90%;
+    opacity: 25%;
+    right: -10vw;
   }
 `;
 
@@ -166,8 +163,8 @@ const CircleFour = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    opacity: 47%;
-    top: 20vh;
+    opacity: 20%;
+    top: 350vh;
   }
 `;
 

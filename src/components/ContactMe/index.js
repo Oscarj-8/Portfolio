@@ -51,6 +51,7 @@ const ContactMeLeft = styled.div`
   justify-content: center;
   text-align: center;
   gap: 1em;
+  z-index: 2;
 
   @media screen and (min-width: 1200px) {
     text-align: left;
