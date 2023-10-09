@@ -162,7 +162,7 @@ const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
 
         {showNavItems && (
           <NavItems>
-            <NavLink to="about">About</NavLink>
+            <NavLink to="/">About</NavLink>
             <NavLink to="skills" smooth={true} duration={1500}>
               Skills
             </NavLink>
@@ -180,13 +180,9 @@ const Navbar = ({ showNavLogoAndMobileIcons = true, showNavItems = true }) => {
           <CloseButton onClick={CloseMobileNav}>&times;</CloseButton>
 
           <MobileNavLinks>
-            {/* <MobileNavLink onClick={CloseMobileNav}>About</MobileNavLink>
-            <MobileNavLink onClick={CloseMobileNav}>Skills</MobileNavLink>
-            <MobileNavLink onClick={CloseMobileNav}>Projects</MobileNavLink>
-            <MobileNavLink onClick={CloseMobileNav}>Contact</MobileNavLink> */}
             <MobileNavLink
               onClick={CloseMobileNav}
-              to="about"
+              to="/"
               smooth={true}
               duration={1500}
             >

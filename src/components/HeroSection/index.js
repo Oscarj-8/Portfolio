@@ -199,8 +199,12 @@ const HeroSection = () => {
         </TextLoop>
         <Description>{Bio.description}</Description>
         <HeroButtons>
-          <ResumeButton>Get resume</ResumeButton>
-          <GithubButton>GitHub account</GithubButton>
+          <a href={Bio.resume} target="_blank" rel="noreferrer">
+            <ResumeButton>Get resume</ResumeButton>
+          </a>
+          <a href={Bio.github} target="_blank" rel="noreferrer">
+            <GithubButton>GitHub account</GithubButton>
+          </a>
         </HeroButtons>
       </HeroText>
 
