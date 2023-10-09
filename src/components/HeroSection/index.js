@@ -150,14 +150,13 @@ const ResumeButton = styled.button`
   }
   @media screen and (min-width: 1200px) {
     padding: 1em 1.5em;
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 600;
   }
 `;
 
 const GithubButton = styled.button`
   font-size: 1em;
-
   padding: 0.7em;
   letter-spacing: 1px;
   background: none;
@@ -174,7 +173,7 @@ const GithubButton = styled.button`
   }
   @media screen and (min-width: 1200px) {
     padding: 1em 1.5em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 600;
   }
 `;

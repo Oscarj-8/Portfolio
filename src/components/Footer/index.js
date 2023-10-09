@@ -8,7 +8,7 @@ import {
   FaRegCopyright,
 } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
-
+import { socialLinks } from "../../data/constants";
 import footerRectangle from "../../images/footerRectangle.png";
 
 const FooterContainer = styled.div`
@@ -147,19 +147,19 @@ const Footer = () => {
         </FooterNavItems>
       </FooterNav>
       <SocialIcons>
-        <FooterIconLink href="https://github.com/Oscarj-8">
+        <FooterIconLink href={socialLinks.github} target="_blank">
           <FaGithub size={35} />
         </FooterIconLink>
-        <FooterIconLink href="www.linkedin.com/in/abdulahi-muhammed-352851285">
+        <FooterIconLink href={socialLinks.linkedin} target="_blank">
           <FaLinkedin size={35} />
         </FooterIconLink>
-        <FooterIconLink href="https://t.me/Osci_walker">
+        <FooterIconLink href={socialLinks.telegram} target="_blank">
           <FaTelegramPlane size={35} />
         </FooterIconLink>
-        <FooterIconLink href="https://t.me/Osci_walker">
+        <FooterIconLink href="https://t.me/Osci_walker" target="_blank">
           <FaTwitter size={35} />
         </FooterIconLink>
-        <FooterIconLink href="https://t.me/Osci_walker">
+        <FooterIconLink href="https://t.me/Osci_walker" target="_blank">
           <FaInstagram size={35} />
         </FooterIconLink>
       </SocialIcons>
