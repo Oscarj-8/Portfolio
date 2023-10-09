@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaRegCopyright,
 } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 
 import footerRectangle from "../../images/footerRectangle.png";
 
@@ -54,7 +55,7 @@ const FooterNavItems = styled.div`
   }
 `;
 
-const FooterNavLink = styled.a`
+const FooterNavLink = styled(ScrollLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colorWhite};
   font-weight: 500;
@@ -131,10 +132,18 @@ const Footer = () => {
       <Abdulahi>Abdulahi Muhammed</Abdulahi>
       <FooterNav>
         <FooterNavItems>
-          <FooterNavLink>About</FooterNavLink>
-          <FooterNavLink>Skills</FooterNavLink>
-          <FooterNavLink>Projects</FooterNavLink>
-          <FooterNavLink>Contact</FooterNavLink>
+          <FooterNavLink to="about" smooth={true} duration={1500}>
+            About
+          </FooterNavLink>
+          <FooterNavLink to="skills" smooth={true} duration={1500}>
+            Skills
+          </FooterNavLink>
+          <FooterNavLink to="projects" smooth={true} duration={1500}>
+            Projects
+          </FooterNavLink>
+          <FooterNavLink to="contact" smooth={true} duration={1500}>
+            Contact
+          </FooterNavLink>
         </FooterNavItems>
       </FooterNav>
       <SocialIcons>

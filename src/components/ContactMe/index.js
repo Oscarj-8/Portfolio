@@ -232,7 +232,7 @@ const ContactMe = () => {
           <br />
           Tell me about your Project
         </Title>
-        <Message>🤟🏼 Let's create something together</Message>
+        <Message>🤟🏼 Let's create something cool together</Message>
         <EmailSection>
           <TopSection>
             <FaRegEnvelope style={{ fontWeight: "bold" }} /> Mail me at
