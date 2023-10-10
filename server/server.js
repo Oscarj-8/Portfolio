@@ -1,10 +1,11 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 4000;
-
+const emailPassword = process.env.EMAIL_PASSWORD;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -24,7 +25,7 @@ app.post("/sendEmail", (req, res) => {
     service: "Gmail",
     auth: {
       user: "mabdulahi954@gmail.com",
-      pass: "Nopa55word6147",
+      pass: emailPassword,
     },
   });
 

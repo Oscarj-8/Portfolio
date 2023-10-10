@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { FaRegEnvelope } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
 
 const inputStyles = `
  font-family: "Montserrat", sans-serif;
@@ -224,6 +225,30 @@ const ContactMe = () => {
     message: "",
   };
 
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      const response = await fetch("http://localhost:4000/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus("success");
+        resetForm();
+      } else {
+        setSubmissionStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmissionStatus("error");
+    }
+  };
+
   return (
     <ContactMeSection id="contact">
       <ContactMeLeft>
@@ -251,10 +276,7 @@ const ContactMe = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={(values, { resetForm }) => {
-            console.log(values);
-            resetForm();
-          }}
+          onSubmit={handleSubmit}
         >
           <StyledForm>
             <GetInTouch>Get in touch</GetInTouch>
@@ -288,7 +310,7 @@ const ContactMe = () => {
                 placeholder="Subject *"
               />
               <ErrorMessageContainer>
-                <ErrorMessage name="subject" className="error" />
+                <ErrorMessage id="subject" name="subject" className="error" />
               </ErrorMessageContainer>
             </div>
             <div>
@@ -303,6 +325,16 @@ const ContactMe = () => {
             <StyledButton type="submit">Send message</StyledButton>
           </StyledForm>
         </Formik>
+        <div>
+          {submissionStatus === "success" && (
+            <div className="success-message">Email sent successfully!</div>
+          )}
+          {submissionStatus === "error" && (
+            <div className="error-message">
+              Error sending email. Please try again later.
+            </div>
+          )}
+        </div>
       </ContactMeRight>
     </ContactMeSection>
   );
