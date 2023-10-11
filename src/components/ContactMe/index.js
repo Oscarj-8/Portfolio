@@ -334,7 +334,10 @@ const ContactMe = () => {
         </Formik>
         <div>
           {submissionStatus === "success" && (
-            <div className="success-message">Email sent successfully!</div>
+            <div className="success-message">
+              Email sent successfully! I will get back to you as soon as
+              possible
+            </div>
           )}
           {submissionStatus === "error" && (
             <div className="error-message">
