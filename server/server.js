@@ -31,7 +31,7 @@ app.post("/sendEmail", (req, res) => {
 
   const mailOptions = {
     from: "mabdulahi954@gmail.com",
-    to: "mabdulahi954@gmail.com", // your email address
+    to: "mabdulahi954@gmail.com",
     subject: subject,
     text: `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`,
   };
