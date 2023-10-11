@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 4000;
-const emailPassword = process.env.REACT_APP_EMAIL_PASSWORD;
+const emailPassword = process.env.EMAIL_PASSWORD;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
