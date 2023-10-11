@@ -240,8 +240,15 @@ const ContactMe = () => {
       if (response.ok) {
         setSubmissionStatus("success");
         resetForm();
+        // Clear the success message after 5 second
+        setTimeout(() => {
+          setSubmissionStatus(null);
+        }, 5000);
       } else {
         setSubmissionStatus("error");
+        setTimeout(() => {
+          setSubmissionStatus(null);
+        }, 5000);
       }
     } catch (error) {
       console.error(error);
