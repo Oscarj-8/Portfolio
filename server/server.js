@@ -5,13 +5,16 @@ require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 4000;
-const emailPassword = process.env.REACT_APP_EMAIL_PASSWORD;
+const emailPassword = process.env.EMAIL_PASSWORD;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Handle CORS (if your React app is on a different domain)
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://abdulahimuhammedportfolio.vercel.app"
+  );
   res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
