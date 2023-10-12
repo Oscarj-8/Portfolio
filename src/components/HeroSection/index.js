@@ -183,8 +183,7 @@ const HeroSection = () => {
     <HeroContainer>
       <HeroText>
         <Title>
-          Hi,
-          <br /> {Bio.name}
+          Hi, i'm <br /> {Bio.name}
         </Title>
         <TextLoop>
           I am a
