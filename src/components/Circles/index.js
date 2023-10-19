@@ -4,16 +4,16 @@ export const CircleOne = styled.div`
   position: absolute;
   background-color: #25cfa7;
   border-radius: 50%;
-  width: 40vw;
+  width: 60vw;
   height: 60vw;
   top: 0vh;
-  left: -5vw;
-  filter: blur(15em);
+  left: -10vw;
+  filter: blur(5em);
 
   @media screen and (min-width: 500px) {
     opacity: 80%;
     top: -10vh;
-    filter: blur(10em);
+    // filter: blur(10em);
   }
 
   @media screen and (min-width: 768px) {
