@@ -4,10 +4,14 @@ const emailPassword = process.env.EMAIL_PASSWORD;
 module.exports = async (req, res) => {
   const { fullName, email, subject, message } = req.body;
 
+  console.log("hey");
+
   if (req.method === "POST") {
     try {
       // Parse the form data from the request body
       // const formData = JSON.parse(JSON.stringify(req.body));
+
+      const formData = JSON.parse(JSON.stringify(req.body));
 
       // Create a transporter using your email provider (e.g., Gmail)
       const transporter = nodemailer.createTransport({
