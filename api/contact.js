@@ -2,10 +2,12 @@ const nodemailer = require("nodemailer");
 const emailPassword = process.env.EMAIL_PASSWORD;
 
 module.exports = async (req, res) => {
+  console.log("hey");
+
   if (req.method === "POST") {
     try {
       // Parse the form data from the request body
-      const formData = JSON.parse(req.body);
+      const formData = JSON.parse(JSON.stringify(req.body));
 
       // Create a transporter using your email provider (e.g., Gmail)
       const transporter = nodemailer.createTransport({
