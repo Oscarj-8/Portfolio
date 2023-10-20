@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 const emailPassword = process.env.EMAIL_PASSWORD;
+
 module.exports = async (req, res) => {
   if (req.method === "POST") {
     try {
