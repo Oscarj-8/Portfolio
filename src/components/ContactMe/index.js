@@ -325,7 +325,7 @@ const ContactMe = () => {
                 as={customTextArea}
                 id="message"
                 name="message"
-                placeholder="Message "
+                placeholder="Message"
               />
             </div>
 
