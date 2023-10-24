@@ -7,6 +7,7 @@ module.exports = async (req, res) => {
   if (req.method === "POST") {
     try {
       // Parse the form data from the request body
+      // const formData = JSON.parse(JSON.stringify(req.body));
       // const formData = JSON.parse(req.body);
 
       // Create a transporter using your email provider (e.g., Gmail)
