@@ -3,7 +3,8 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
-
+import check from "../../images/check-mark.png";
+import check2 from "../../images/checked.png";
 const inputStyles = `
  font-family: "Montserrat", sans-serif;
   width: 100%;
@@ -335,8 +336,12 @@ const ContactMe = () => {
         <div>
           {submissionStatus === "success" && (
             <div className="success-message">
-              Email sent successfully! I will get back to you as soon as
-              possible
+              <div className="success-body">
+                <img src={check} alt="success icon" className="success-icon" />
+                Email sent successfully! I will get back to you as soon as
+                possible
+              </div>
+              <div className="success-progress"></div>
             </div>
           )}
           {submissionStatus === "error" && (
