@@ -4,6 +4,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
 import check from "../../images/check-mark.png";
+import check2 from "../../images/checked.png";
+import check from "../../images/check-mark.png";
 const inputStyles = `
  font-family: "Montserrat", sans-serif;
   width: 100%;
