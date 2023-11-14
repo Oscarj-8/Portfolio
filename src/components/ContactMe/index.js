@@ -286,7 +286,7 @@ const ContactMe = () => {
           onSubmit={handleSubmit}
         >
           <StyledForm>
-            <GetInTouch>Get in touchh</GetInTouch>
+            <GetInTouch>Get in touch</GetInTouch>
             <div>
               <StyledField
                 type="text"
