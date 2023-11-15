@@ -332,7 +332,7 @@ const ContactMe = () => {
             <StyledButton type="submit">Send message</StyledButton>
           </StyledForm>
         </Formik>
-        <div className="pop">
+        <div>
           {submissionStatus === "success" && (
             <div className="success-message">
               <div className="success-body">
