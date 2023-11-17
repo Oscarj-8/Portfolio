@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
-import heroImage1 from "../../images/heroImage1.jpg";
+import heroImage from "../../images/heroimageNew.jpg";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -208,7 +208,7 @@ const HeroSection = () => {
         </HeroButtons>
       </HeroText>
 
-      <ImageSec src={heroImage1} alt="Abdulahi's img" />
+      <ImageSec src={heroImage} alt="Abdulahi's img" />
     </HeroContainer>
   );
 };
