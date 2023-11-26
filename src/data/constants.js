@@ -22,6 +22,7 @@ import taskTrackerReact from "../images/taskTrackerReact.png";
 import taskTraackerAngular from "../images/taskTrackerAngular.png";
 import lewach from "../images/lewach.png";
 import hr from "../images/hr.png";
+import githubUserFinder from "../images/githubUserFinder.png";
 
 export const Bio = {
   name: "Abdulahi Muhammed",
@@ -171,13 +172,14 @@ export const projects = [
   },
   {
     id: 2,
-    image: taskTraackerAngular,
-    title: "Task Tracker (Angular)",
+    image: githubUserFinder,
+    title: "GitHub User Finder",
     description:
-      "This task tracker web app built with Angular and Json-server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
-    tags: ["Angular", "Json-server", "EsLint", "TypeScript"],
-    repository: "https://github.com/Oscarj-8/Angular-Task-Tracker",
+      "The GitHub User Finder is a web application developed using Vite and React, designed to streamline the process of discovering GitHub users and exploring their profiles. Leveraging the GitHub API for seamless data retrieval, this project provides an intuitive and efficient platform for users to search, view, and gather information about GitHub profiles.",
+    tags: ["Vite", "React", "JavaScript", "EsLint", "GitHub API"],
+    repository: "https://github.com/Oscarj-8/github-user-finder",
   },
+
   {
     id: 3,
     image: taskTrackerReact,
@@ -186,5 +188,14 @@ export const projects = [
       "This task tracker web app built with ReactJS and JSON server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
     tags: ["ReactJs", "Json-server", "EsLint", "JavaScript"],
     repository: "https://github.com/Oscarj-8/React-Task-Tracker",
+  },
+  {
+    id: 4,
+    image: taskTraackerAngular,
+    title: "Task Tracker (Angular)",
+    description:
+      "This task tracker web app built with Angular and Json-server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
+    tags: ["Angular", "Json-server", "EsLint", "TypeScript"],
+    repository: "https://github.com/Oscarj-8/Angular-Task-Tracker",
   },
 ];
