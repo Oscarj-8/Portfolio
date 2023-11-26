@@ -145,33 +145,7 @@ export const skills = [
 export const projects = [
   {
     id: 0,
-    image: taskTrackerReact,
-    title: "Task Tracker (ReactJS)",
-    description:
-      "This task tracker web app built with ReactJS and JSON server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
-    tags: ["ReactJs", "Json-server", "EsLint", "JavaScript"],
-    repository: "https://github.com/Oscarj-8/React-Task-Tracker",
-  },
-  {
-    id: 1,
-    image: taskTraackerAngular,
-    title: "Task Tracker (Angular)",
-    description:
-      "This task tracker web app built with Angular and Json-server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
-    tags: ["Angular", "Json-server", "EsLint", "TypeScript"],
-    repository: "https://github.com/Oscarj-8/Angular-Task-Tracker",
-  },
-  {
-    id: 2,
-    image: lewach,
-    title: "Lewach Items Exchange ",
-    description:
-      "This platform offers users a dynamic and intuitive interface to effortlessly trade items. powered by Node.js, the backend ensures swift and secure communication, allowing users to list, browse, and connect with others for mutually beneficial exchanges.",
-    tags: ["ReactJs", "NodeJs", "ExpressJs", "JavaScript", "MongoDB", "EsLint"],
-    repository: "https://github.com/Oscarj-8/Lewach_items_exchange",
-  },
-  {
-    id: 3,
+
     image: hr,
     title: "Hr sample",
     description:
@@ -184,5 +158,33 @@ export const projects = [
       "Angular services",
     ],
     repository: "https://github.com/Oscarj-8/Hr-app",
+  },
+  {
+    id: 1,
+
+    image: lewach,
+    title: "Lewach Items Exchange ",
+    description:
+      "This platform offers users a dynamic and intuitive interface to effortlessly trade items. powered by Node.js, the backend ensures swift and secure communication, allowing users to list, browse, and connect with others for mutually beneficial exchanges.",
+    tags: ["ReactJs", "NodeJs", "ExpressJs", "JavaScript", "MongoDB", "EsLint"],
+    repository: "https://github.com/Oscarj-8/Lewach_items_exchange",
+  },
+  {
+    id: 2,
+    image: taskTraackerAngular,
+    title: "Task Tracker (Angular)",
+    description:
+      "This task tracker web app built with Angular and Json-server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
+    tags: ["Angular", "Json-server", "EsLint", "TypeScript"],
+    repository: "https://github.com/Oscarj-8/Angular-Task-Tracker",
+  },
+  {
+    id: 3,
+    image: taskTrackerReact,
+    title: "Task Tracker (ReactJS)",
+    description:
+      "This task tracker web app built with ReactJS and JSON server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
+    tags: ["ReactJs", "Json-server", "EsLint", "JavaScript"],
+    repository: "https://github.com/Oscarj-8/React-Task-Tracker",
   },
 ];
