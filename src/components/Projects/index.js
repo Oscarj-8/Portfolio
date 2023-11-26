@@ -83,9 +83,11 @@ const ProjectImage = styled.img`
   border-radius: 0.25em;
   transition: all 1.5s ease-in-out;
 
-  &:hover {
-    transform: translateY(-1em);
-    scale: 1.8;
+  @media (min-width: 768px) {
+    &:hover {
+      transform: translateY(-1em);
+      scale: 1.8;
+    }
   }
 `;
 
