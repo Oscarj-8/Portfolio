@@ -67,7 +67,7 @@ const Project = styled.div`
   padding: 1.5em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1em;
   border-radius: 0.25em;
   box-shadow: 2px 2px 20px rgba(20, 116, 105, 0.5);
@@ -80,8 +80,13 @@ const Project = styled.div`
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: 270px;
   border-radius: 0.25em;
+  transition: all 1.5s ease-in-out;
+
+  &:hover {
+    transform: translateY(-1em);
+    scale: 1.8;
+  }
 `;
 
 const Tags = styled.div`
