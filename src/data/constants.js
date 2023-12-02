@@ -23,6 +23,7 @@ import taskTraackerAngular from "../images/taskTrackerAngular.png";
 import lewach from "../images/lewach.png";
 import hr from "../images/hr.png";
 import githubUserFinder from "../images/githubUserFinder.png";
+import reactWeatherWebApp from "../images/reactWeatherWebApp.png";
 
 export const Bio = {
   name: "Abdulahi Muhammed",
@@ -181,7 +182,7 @@ export const projects = [
 
   {
     id: 3,
-    image: taskTrackerReact,
+    image: reactWeatherWebApp,
     title: "React Weather Web App",
     description:
       "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
