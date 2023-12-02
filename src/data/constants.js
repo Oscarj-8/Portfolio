@@ -162,7 +162,6 @@ export const projects = [
   },
   {
     id: 1,
-
     image: lewach,
     title: "Lewach Items Exchange ",
     description:
@@ -183,6 +182,16 @@ export const projects = [
   {
     id: 3,
     image: taskTrackerReact,
+    title: "React Weather Web App",
+    description:
+      "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
+    tags: ["ReactJs", "Vite", "EsLint", "JavaScript", "OpenWeather API"],
+    repository: "https://github.com/Oscarj-8/react-weather-app",
+  },
+
+  {
+    id: 4,
+    image: taskTrackerReact,
     title: "Task Tracker (ReactJS)",
     description:
       "This task tracker web app built with ReactJS and JSON server allows you to easily add and track tasks with customizable dates and reminders. With a simple and intuitive interface, you can quickly stay on top of your to-do list.",
@@ -190,7 +199,7 @@ export const projects = [
     repository: "https://github.com/Oscarj-8/React-Task-Tracker",
   },
   {
-    id: 4,
+    id: 5,
     image: taskTraackerAngular,
     title: "Task Tracker (Angular)",
     description:
