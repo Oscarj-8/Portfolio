@@ -6,23 +6,18 @@ module.exports = async (req, res) => {
 
   if (req.method === "POST") {
     try {
-      // Parse the form data from the request body
-      // const formData = JSON.parse(JSON.stringify(req.body));
-
-      // Create a transporter using your email provider (e.g., Gmail)
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {
-          user: "mabdulahi954@gmail.com", // Your email address
-          pass: emailPassword, // Your email password
+          user: "mabdulahi954@gmail.com",
+          pass: emailPassword,
         },
       });
 
-      // Compose the email
       const mailOptions = {
         from: email,
-        to: "mabdulahi954@gmail.com", // Your email address
-        subject: subject, // Use the subject from the form
+        to: "mabdulahi954@gmail.com",
+        subject: subject,
         text: `
         Name: ${fullName},
         Email: ${email}
@@ -31,7 +26,6 @@ module.exports = async (req, res) => {
         `,
       };
 
-      // Send the email
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
           console.error(error);
