@@ -1,5 +1,4 @@
 import react from "../images/react.png";
-import angular from "../images/angualr.png";
 import js from "../images/javaScript.png";
 import html from "../images/html.png";
 import bootstrap from "../images/bootstrap.png";
@@ -12,17 +11,17 @@ import mongoDB from "../images/mongoDB.png";
 import express from "../images/express.png";
 import mySql from "../images/mySql.png";
 import vsCode from "../images/vsCode.png";
-import andriodStudio from "../images/andriodStudio.png";
 import github from "../images/github.png";
 import git from "../images/git.png";
 import ps from "../images/ps.png";
 import figma from "../images/figma.png";
-import xd from "../images/xd.png";
 import taskTrackerReact from "../images/taskTrackerReact.png";
 import taskTraackerAngular from "../images/taskTrackerAngular.png";
 import lewach from "../images/lewach.png";
 import hr from "../images/hr.png";
 import githubUserFinder from "../images/githubUserFinder.png";
+import dagoo from "../images/dagoo.png";
+import harari from "../images/harari.png";
 import reactWeatherWebApp from "../images/reactWeatherWebApp.png";
 
 export const Bio = {
@@ -53,10 +52,6 @@ export const skills = [
       {
         name: "React Js",
         image: react,
-      },
-      {
-        name: "Angular",
-        image: angular,
       },
       {
         name: "Javascript",
@@ -117,10 +112,6 @@ export const skills = [
         image: vsCode,
       },
       {
-        name: "Android Studio",
-        image: andriodStudio,
-      },
-      {
         name: "GitHub",
         image: github,
       },
@@ -136,10 +127,6 @@ export const skills = [
         name: "Figma",
         image: figma,
       },
-      {
-        name: "Adobe XD",
-        image: xd,
-      },
     ],
   },
 ];
@@ -147,7 +134,33 @@ export const skills = [
 export const projects = [
   {
     id: 0,
-
+    image: dagoo,
+    title: "Dagoo portfolio website",
+    description:
+      " Welcome to the GitHub repository for the Dagoo.inc portfolio website project! Explore the source code for this digital marketing showcase, highlighting services, projects, and expertise. Built with Vite, React, and Tailwind CSS, this project demonstrates modern web development and design practices for impactful digital experiences.",
+    tags: ["React", "Tailwind Css", "EsLint", "Vite", "Styled Components"],
+    repository: "https://github.com/Oscarj-8/dagoo-potfolio-website",
+  },
+  {
+    id: 1,
+    image: harari,
+    title: "Harari building permit and inspection authority",
+    description:
+      "Welcome to the Harari Building Permit and Inspection Authority repository! Our project aims to simplify construction processes by providing services like Plan Consent, Design Evaluation, Building Permit, and Building Inspection. Join us in ensuring compliance, safety, and quality in construction.",
+    tags: [
+      "React",
+      "Node Js",
+      "Express Js",
+      "EsLint",
+      "Tailwind Css",
+      "React Redux",
+      "Material UI",
+    ],
+    repository:
+      "https://github.com/Oscarj-8/harari-building-permit-and-inspection-authority",
+  },
+  {
+    id: 2,
     image: hr,
     title: "Hr sample",
     description:
@@ -162,7 +175,7 @@ export const projects = [
     repository: "https://github.com/Oscarj-8/Hr-app",
   },
   {
-    id: 1,
+    id: 3,
     image: lewach,
     title: "Lewach Items Exchange ",
     description:
@@ -171,7 +184,7 @@ export const projects = [
     repository: "https://github.com/Oscarj-8/Lewach_items_exchange",
   },
   {
-    id: 2,
+    id: 4,
     image: githubUserFinder,
     title: "GitHub User Finder",
     description:
@@ -181,7 +194,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     image: reactWeatherWebApp,
     title: "React Weather Web App",
     description:
@@ -191,7 +204,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 6,
     image: taskTrackerReact,
     title: "Task Tracker (ReactJS)",
     description:
@@ -200,7 +213,7 @@ export const projects = [
     repository: "https://github.com/Oscarj-8/React-Task-Tracker",
   },
   {
-    id: 5,
+    id: 7,
     image: taskTraackerAngular,
     title: "Task Tracker (Angular)",
     description:
