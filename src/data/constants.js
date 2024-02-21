@@ -27,7 +27,7 @@ import reactWeatherWebApp from "../images/reactWeatherWebApp.png";
 export const Bio = {
   name: "Abdulahi Muhammed",
   roles: [
-    "Full stack developer",
+    "Front-end developer",
     "UI/UX Designer",
     "Web Developer",
     "Programmer",

@@ -200,7 +200,7 @@ const HeroSection = () => {
         <Description>{Bio.description}</Description>
         <HeroButtons>
           <a href={Bio.resume} target="_blank" rel="noreferrer">
-            <ResumeButton>Get resume</ResumeButton>
+            <ResumeButton>View resume</ResumeButton>
           </a>
           <a href={Bio.github} target="_blank" rel="noreferrer">
             <GithubButton>GitHub account</GithubButton>
