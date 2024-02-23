@@ -139,6 +139,7 @@ export const projects = [
     description:
       " Welcome to the GitHub repository for the Dagoo.inc portfolio website project! Explore the source code for this digital marketing showcase, highlighting services, projects, and expertise. Built with Vite, React, and Tailwind CSS, this project demonstrates modern web development and design practices for impactful digital experiences.",
     tags: ["React", "Tailwind Css", "EsLint", "Vite", "Styled Components"],
+    link: "https://dagoo-potfolio-website.vercel.app",
     repository: "https://github.com/Oscarj-8/dagoo-potfolio-website",
   },
   {
@@ -156,6 +157,7 @@ export const projects = [
       "React Redux",
       "Material UI",
     ],
+    link: "https://www.hararibpia.com/",
     repository:
       "https://github.com/Oscarj-8/harari-building-permit-and-inspection-authority",
   },
@@ -176,31 +178,33 @@ export const projects = [
   },
   {
     id: 3,
+    image: githubUserFinder,
+    title: "GitHub User Finder",
+    description:
+      "The GitHub User Finder is a web application developed using Vite and React, designed to streamline the process of discovering GitHub users and exploring their profiles. Leveraging the GitHub API for seamless data retrieval, this project provides an intuitive and efficient platform for users to search, view, and gather information about GitHub profiles.",
+    tags: ["Vite", "React", "JavaScript", "EsLint", "GitHub API"],
+    link: "https://github-user-finder-main.vercel.app/",
+    repository: "https://github.com/Oscarj-8/github-user-finder",
+  },
+  {
+    id: 4,
+    image: reactWeatherWebApp,
+    title: "React Weather Web App",
+    description:
+      "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
+    tags: ["ReactJs", "Vite", "EsLint", "JavaScript", "OpenWeather API"],
+    link: "https://react-weather-app-seven-wine.vercel.app/",
+    repository: "https://github.com/Oscarj-8/react-weather-app",
+  },
+
+  {
+    id: 5,
     image: lewach,
     title: "Lewach Items Exchange ",
     description:
       "This platform offers users a dynamic and intuitive interface to effortlessly trade items. powered by Node.js, the backend ensures swift and secure communication, allowing users to list, browse, and connect with others for mutually beneficial exchanges.",
     tags: ["ReactJs", "NodeJs", "ExpressJs", "JavaScript", "MongoDB", "EsLint"],
     repository: "https://github.com/Oscarj-8/Lewach_items_exchange",
-  },
-  {
-    id: 4,
-    image: githubUserFinder,
-    title: "GitHub User Finder",
-    description:
-      "The GitHub User Finder is a web application developed using Vite and React, designed to streamline the process of discovering GitHub users and exploring their profiles. Leveraging the GitHub API for seamless data retrieval, this project provides an intuitive and efficient platform for users to search, view, and gather information about GitHub profiles.",
-    tags: ["Vite", "React", "JavaScript", "EsLint", "GitHub API"],
-    repository: "https://github.com/Oscarj-8/github-user-finder",
-  },
-
-  {
-    id: 5,
-    image: reactWeatherWebApp,
-    title: "React Weather Web App",
-    description:
-      "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
-    tags: ["ReactJs", "Vite", "EsLint", "JavaScript", "OpenWeather API"],
-    repository: "https://github.com/Oscarj-8/react-weather-app",
   },
 
   {

@@ -119,6 +119,29 @@ const ProjectDescription = styled.div`
   line-height: 1.5em;
 `;
 
+const ProjectLink = styled.a`
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 1s;
+  &:hover {
+    color: ${({ theme }) => theme.buttonColor};
+  }
+`;
+
+const Arrow = styled.span`
+  scale: 2;
+  margin-top: -4px;
+  transition: transform 1s;
+  &:hover {
+    transform: rotate(-360deg);
+    color: ${({ theme }) => theme.buttonColor};
+  }
+`;
+
 const GoToButton = styled.button`
   background-color: ${({ theme }) => theme.buttonColor};
   color: ${({ theme }) => theme.projectTagColor};
@@ -129,12 +152,17 @@ const GoToButton = styled.button`
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
+  width: 11rem;
+
+  a {
+    color: ${({ theme }) => theme.projectTagColor};
+    text-decoration: none;
+  }
 
   &:hover {
     background-color: #260149;
   }
 `;
-
 const Projects = (index) => {
   return (
     <ProjectsSection id="projects">
@@ -155,13 +183,22 @@ const Projects = (index) => {
               </Tags>
               <ProjectTitle>{item.title}</ProjectTitle>
               <ProjectDescription>{item.description}</ProjectDescription>
-              <a
-                href={item.repository}
+              <ProjectLink
+                href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GoToButton>Go to repository</GoToButton>
-              </a>
+                Live demo <Arrow className="span1"> &rarr; </Arrow>
+              </ProjectLink>
+              <GoToButton>
+                <a
+                  href={item.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Go to repository
+                </a>
+              </GoToButton>
             </Project>
           ))}
         </ProjectsContainer>
