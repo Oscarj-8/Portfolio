@@ -163,18 +163,13 @@ export const projects = [
   },
   {
     id: 2,
-    image: hr,
-    title: "Hr sample",
+    image: reactWeatherWebApp,
+    title: "React Weather Web App",
     description:
-      " Angular-based HR web app featuring an in-memory database, designed for efficient CRUD operations on candidate and employee data. This project demonstrates streamlined data management, highlighting its potential to optimize HR processes.",
-    tags: [
-      "Angular",
-      "In-memory DB",
-      "EsLint",
-      "TypeScript",
-      "Angular services",
-    ],
-    repository: "https://github.com/Oscarj-8/Hr-app",
+      "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
+    tags: ["ReactJs", "Vite", "EsLint", "JavaScript", "OpenWeather API"],
+    link: "https://react-weather-app-seven-wine.vercel.app/",
+    repository: "https://github.com/Oscarj-8/react-weather-app",
   },
   {
     id: 3,
@@ -188,13 +183,18 @@ export const projects = [
   },
   {
     id: 4,
-    image: reactWeatherWebApp,
-    title: "React Weather Web App",
+    image: hr,
+    title: "Hr sample",
     description:
-      "This is a simple weather application built with Vite and React, utilizing the OpenWeather API to fetch real-time weather data. Users can enter a city name, and the app will display information such as the current weather, description, and temperature.",
-    tags: ["ReactJs", "Vite", "EsLint", "JavaScript", "OpenWeather API"],
-    link: "https://react-weather-app-seven-wine.vercel.app/",
-    repository: "https://github.com/Oscarj-8/react-weather-app",
+      " Angular-based HR web app featuring an in-memory database, designed for efficient CRUD operations on candidate and employee data. This project demonstrates streamlined data management, highlighting its potential to optimize HR processes.",
+    tags: [
+      "Angular",
+      "In-memory DB",
+      "EsLint",
+      "TypeScript",
+      "Angular services",
+    ],
+    repository: "https://github.com/Oscarj-8/Hr-app",
   },
 
   {
