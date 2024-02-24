@@ -183,13 +183,15 @@ const Projects = (index) => {
               </Tags>
               <ProjectTitle>{item.title}</ProjectTitle>
               <ProjectDescription>{item.description}</ProjectDescription>
-              <ProjectLink
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live demo <Arrow className="span1"> &rarr; </Arrow>
-              </ProjectLink>
+              {item.link && (
+                <ProjectLink
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live demo <Arrow className="span1"> &rarr; </Arrow>
+                </ProjectLink>
+              )}
               <GoToButton>
                 <a
                   href={item.repository}
