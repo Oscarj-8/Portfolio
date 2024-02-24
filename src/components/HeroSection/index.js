@@ -180,7 +180,7 @@ const GithubButton = styled.button`
 
 const HeroSection = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="about">
       <HeroText>
         <Title>
           Hi, i'm <br /> {Bio.name}
