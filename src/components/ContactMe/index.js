@@ -124,9 +124,13 @@ const RightTopSection = styled.div`
 `;
 
 const Header = styled.h1`
+  position: relative;
   margin: 0;
 `;
 
+const Me = styled.span`
+  position: relative;
+`;
 const Description = styled.p`
   margin: 0 0 1em 0;
   font-size: 1.125em;
@@ -274,7 +278,10 @@ const ContactMe = () => {
       </ContactMeLeft>
       <ContactMeRight>
         <RightTopSection>
-          <Header>Contact me</Header>
+          <Header>
+            Contact <Me className="line">me</Me>
+          </Header>
+
           <Description>
             Please don't hesitate to get in touch with me for any inquiries or
             potential collaborations
