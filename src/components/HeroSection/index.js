@@ -183,7 +183,7 @@ const HeroSection = () => {
   return (
     <HeroContainer id="about">
       <HeroText>
-        <Title>
+        <Title className="text-animation">
           Hi, i'm <br /> {Bio.name}
         </Title>
         <TextLoop>

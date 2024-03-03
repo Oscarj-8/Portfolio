@@ -13,6 +13,26 @@ code {
     monospace;
 }
 
+.text-animation {
+  background: linear-gradient(to right, #9540ea, #fff 50%, #1b9a82);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 3s linear infinite gradient;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%, 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 75%;
+  }
+}
+
 .line::after {
   content: "";
   position: absolute;
