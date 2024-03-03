@@ -263,7 +263,7 @@ const ContactMe = () => {
   return (
     <ContactMeSection id="contact">
       <ContactMeLeft>
-        <Title>
+        <Title className="text-animation">
           Let's chat.
           <br />
           Tell me about your Project
