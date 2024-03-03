@@ -12,3 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.line::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 16px;
+  transform: rotate(-5deg);
+  border-bottom: solid 4px #9540ea;
+  bottom: -8px;
+  left: 0;
+  border-radius: 50%;
+}

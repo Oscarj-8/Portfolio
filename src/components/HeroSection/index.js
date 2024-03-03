@@ -95,6 +95,7 @@ const TextLoop = styled.div`
 `;
 
 const Span = styled.span`
+  position: relative;
   font-size: 1em;
   color: #4a1d75;
   font-weight: 700;

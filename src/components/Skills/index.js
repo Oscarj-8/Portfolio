@@ -22,6 +22,7 @@ const SkillsWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  position: relative;
   margin: 0;
   font-size: 1.725em;
   font-weight: 700;
@@ -128,7 +129,7 @@ const Skills = () => {
   return (
     <SkillsSection id="skills">
       <SkillsWrapper>
-        <Title>Skills</Title>
+        <Title className="line">Skills</Title>
         <Description>
           Check out some of the skills i've been working on:
         </Description>
