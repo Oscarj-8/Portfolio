@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
 import heroImage from "../../images/heroimageNew.jpg";
+import { FaAngleDoubleUp } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -12,7 +14,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   gap: 2em;
   margin-bottom: 1em;
-  z-index: 1;
+  z-index: 9999;
   @media screen and (min-width: 500px) {
     padding: 0 2em;
     margin-bottom: 2.5em;
@@ -179,7 +181,47 @@ const GithubButton = styled.button`
   }
 `;
 
+const UpIconContainer = styled.div`
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  color: white;
+  scale: 1.2;
+  transition: all 1s ease-in-out;
+  background: linear-gradient(
+    to bottom right,
+    ${({ theme }) => theme.tertiaryColor},
+    ${({ theme }) => theme.secondaryColor}
+  );
+  padding: 0.8em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.3);
+`;
+
 const HeroSection = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  function handleScroller() {
+    window.scrollTo({
+      top: 0,
+      left: 100,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <HeroContainer id="about">
       <HeroText>
@@ -208,8 +250,15 @@ const HeroSection = () => {
           </a>
         </HeroButtons>
       </HeroText>
-
       <ImageSec src={heroImage} alt="Abdulahi's img" />
+      <UpIconContainer
+        onClick={handleScroller}
+        style={{
+          opacity: `${showBackToTop ? "100%" : "0"}`,
+        }}
+      >
+        <FaAngleDoubleUp />
+      </UpIconContainer>
     </HeroContainer>
   );
 };
