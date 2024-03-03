@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  position: relative;
   margin: 0;
   font-size: 1.725em;
   font-weight: 700;
@@ -167,7 +168,7 @@ const Projects = (index) => {
   return (
     <ProjectsSection id="projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <Title className="line">Projects</Title>
         <Description>
           Below, you'll find an overview of the various projects i've had the
           privilege to work on thus far:
