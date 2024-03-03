@@ -11,7 +11,7 @@ const Nav = styled.div`
   align-items: center;
   font-size: 1em;
   top: 0;
-  z-index: 2;
+  z-index: 99999;
   @media screen and (max-width: 960px) {
     transition: all 0.8s ease;
   }
